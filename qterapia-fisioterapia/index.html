@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>+Qterapia Fisioterapia & Osteopatía | Fisioterapia en Cáceres</title>
+<meta name="description" content="+Qterapia es tu centro de fisioterapia y osteopatía en Cáceres. 128 reseñas con 5.0★. Tratamientos personalizados de fisioterapia avanzada, osteopatía y rehabilitación. Pide tu cita online.">
+<meta name="keywords" content="fisioterapia, Cáceres, osteopatía, rehabilitación, fisioterapia deportiva, terapia manual, punción seca, Cáceres fisioterapeuta">
+<link rel="canonical" href="https://www.masqterapia.com/">
+<meta property="og:title" content="+Qterapia Fisioterapia & Osteopatía | Fisioterapia en Cáceres">
+<meta property="og:description" content="Fisioterapia y osteopatía de precisión en Cáceres. 128 pacientes nos avalan con 5.0★. Recupera tu movilidad con los mejores profesionales.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #1A3C34;
+  --primary-light: #2A5F54;
+  --bg: #F5F0EB;
+  --bg-alt: #EDE7E0;
+  --accent: #D4A574;
+  --accent-dark: #B8895A;
+  --text: #1A1A1A;
+  --text-light: #5C5C5C;
+  --white: #FFFFFF;
+  --radius: 16px;
+  --radius-sm: 8px;
+  --shadow: 0 4px 24px rgba(26, 60, 52, 0.08);
+  --shadow-lg: 0 12px 48px rgba(26, 60, 52, 0.12);
+  --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: 'Outfit', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600; line-height: 1.15; }
+h1 { font-size: clamp(2.8rem, 5vw, 4.5rem); }
+h2 { font-size: clamp(2rem, 3.5vw, 3rem); }
+h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
+
+.container { width: 90%; max-width: 1200px; margin: 0 auto; }
+
+/* Header */
+.header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  padding: 1rem 0; transition: var(--transition);
+  background: transparent;
+}
+.header.scrolled { background: rgba(245, 240, 235, 0.95); backdrop-filter: blur(12px); box-shadow: var(--shadow); }
+.header .container { display: flex; justify-content: space-between; align-items: center; }
+
+.logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700; color: var(--primary); text-decoration: none; letter-spacing: -0.02em; }
+.logo span { color: var(--accent); }
+
+.nav { display: flex; gap: 2rem; list-style: none; }
+.nav a { color: var(--primary); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; position: relative; }
+.nav a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--accent); transition: width var(--transition); }
+.nav a:hover::after, .nav a:focus::after { width: 100%; }
+
+.header-cta {
+  background: var(--primary); color: var(--white); border: none;
+  padding: 0.7rem 1.6rem; border-radius: 50px; font-family: 'Outfit', sans-serif;
+  font-weight: 600; font-size: 0.9rem; cursor: pointer; text-decoration: none;
+  transition: var(--transition); display: inline-block;
+}
+.header-cta:hover { background: var(--accent); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(212, 165, 116, 0.4); }
+
+/* Hero */
+.hero {
+  min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr;
+  align-items: center; position: relative; overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; top: -20%; right: -10%; width: 60%; height: 140%;
+  background: radial-gradient(ellipse at center, rgba(26, 60, 52, 0.03) 0%, transparent 70%);
+  z-index: 0;
+}
+.hero-blob {
+  position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.12; z-index: 0;
+}
+.hero-blob-1 { top: 10%; right: 15%; width: 400px; height: 400px; background: var(--accent); }
+.hero-blob-2 { bottom: 5%; left: 5%; width: 300px; height: 300px; background: var(--primary-light); }
+.hero-blob-3 { top: 50%; left: 40%; width: 250px; height: 250px; background: #7BA89A; }
+
+.hero-content { padding: 4rem 0 4rem 8%; position: relative; z-index: 1; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: var(--white); padding: 0.5rem 1.2rem; border-radius: 50px;
+  font-size: 0.85rem; font-weight: 500; color: var(--primary);
+  box-shadow: var(--shadow); margin-bottom: 1.5rem;
+  animation: fadeInUp 0.8s ease-out;
+}
+.hero-badge .stars { color: #F5A623; letter-spacing: 2px; }
+.hero-badge .count { color: var(--text-light); }
+
+.hero-content h1 { color: var(--primary); margin-bottom: 1rem; animation: fadeInUp 0.8s ease-out 0.1s both; }
+.hero-content h1 em { font-style: italic; color: var(--accent); }
+.hero-tagline { font-size: 1.2rem; color: var(--text-light); margin-bottom: 2rem; max-width: 440px; animation: fadeInUp 0.8s ease-out 0.2s both; }
+
+.hero-cta-group { display: flex; gap: 1rem; flex-wrap: wrap; animation: fadeInUp 0.8s ease-out 0.3s both; }
+.btn-primary {
+  background: var(--primary); color: var(--white); border: none;
+  padding: 1rem 2rem; border-radius: 50px; font-family: 'Outfit', sans-serif;
+  font-weight: 600; font-size: 1rem; cursor: pointer; text-decoration: none;
+  transition: var(--transition); display: inline-flex; align-items: center; gap: 0.5rem;
+}
+.btn-primary:hover { background: var(--accent); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(212, 165, 116, 0.4); }
+.btn-outline {
+  background: transparent; color: var(--primary); border: 2px solid var(--primary);
+  padding: 1rem 2rem; border-radius: 50px; font-family: 'Outfit', sans-serif;
+  font-weight: 600; font-size: 1rem; cursor: pointer; text-decoration: none;
+  transition: var(--transition); display: inline-flex; align-items: center; gap: 0.5rem;
+}
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+.hero-visual { position: relative; z-index: 1; height: 100%; display: flex; align-items: center; }
+.hero-image-wrapper {
+  position: relative; width: 90%; aspect-ratio: 4/5; border-radius: var(--radius);
+  overflow: hidden; box-shadow: var(--shadow-lg);
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+.hero-image-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+.hero-float-card {
+  position: absolute; bottom: 5%; left: -5%; background: var(--white);
+  padding: 1.2rem 1.5rem; border-radius: var(--radius); box-shadow: var(--shadow-lg);
+  animation: fadeInUp 0.8s ease-out 0.5s both;
+}
+.hero-float-card .icon { font-size: 2rem; margin-bottom: 0.3rem; }
+.hero-float-card .label { font-size: 0.8rem; color: var(--text-light); }
+.hero-float-card .value { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 700; color: var(--primary); }
+
+/* Pulse line decor */
+.pulse-line {
+  position: absolute; top: 15%; right: 0; width: 200px; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent));
+  animation: pulseLine 2s ease-in-out infinite;
+}
+@keyframes pulseLine { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Trust bar */
+.trust-bar {
+  background: var(--primary); color: var(--white); padding: 2.5rem 0;
+  position: relative; overflow: hidden;
+}
+.trust-bar::before {
+  content: ''; position: absolute; inset: 0;
+  background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.02) 10px, rgba(255,255,255,0.02) 20px);
+}
+.trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center; position: relative; z-index: 1; }
+.trust-item .trust-num { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 700; color: var(--accent); }
+.trust-item .trust-label { font-size: 0.9rem; opacity: 0.85; margin-top: 0.3rem; }
+
+/* Sections */
+.section { padding: 6rem 0; }
+.section-alt { background: var(--bg-alt); }
+.section-label { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent); font-weight: 600; margin-bottom: 0.5rem; }
+.section-title { color: var(--primary); margin-bottom: 0.75rem; }
+.section-subtitle { color: var(--text-light); font-size: 1.1rem; max-width: 600px; margin-bottom: 3rem; }
+
+/* Services */
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.service-card {
+  background: var(--white); border-radius: var(--radius); padding: 2rem;
+  transition: var(--transition); position: relative; overflow: hidden;
+  border: 1px solid transparent;
+}
+.service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--accent); }
+.service-card::before {
+  content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 0;
+  background: var(--accent); transition: height var(--transition);
+}
+.service-card:hover::before { height: 100%; }
+.service-icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
+.service-card h3 { margin-bottom: 0.5rem; color: var(--primary); }
+.service-card p { color: var(--text-light); font-size: 0.95rem; }
+
+/* Reviews */
+.reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.review-card {
+  background: var(--white); border-radius: var(--radius); padding: 2rem;
+  border: 1px solid rgba(26, 60, 52, 0.08); transition: var(--transition);
+}
+.review-card:hover { box-shadow: var(--shadow-lg); }
+.review-stars { color: #F5A623; font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 0.5rem; }
+.review-text { font-style: italic; color: var(--text); margin-bottom: 1rem; font-size: 0.95rem; }
+.review-author { font-weight: 600; color: var(--primary); font-size: 0.9rem; }
+.review-date { color: var(--text-light); font-size: 0.8rem; }
+
+/* About */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.about-image { border-radius: var(--radius); overflow: hidden; position: relative; }
+.about-image img { width: 100%; height: 100%; object-fit: cover; }
+.about-image::after {
+  content: ''; position: absolute; inset: 0; border: 2px solid var(--accent);
+  border-radius: var(--radius); transform: translate(12px, 12px); z-index: -1;
+}
+.about-content .section-label { color: var(--accent); }
+
+/* Gallery */
+.gallery-masonry { columns: 3; gap: 1rem; }
+.gallery-masonry img { width: 100%; border-radius: var(--radius-sm); margin-bottom: 1rem; display: block; transition: transform 0.3s; }
+.gallery-masonry img:hover { transform: scale(1.02); }
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: var(--white); padding: 5rem 0; text-align: center; position: relative; overflow: hidden;
+}
+.cta-section::before {
+  content: ''; position: absolute; top: -50%; right: -20%; width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(212, 165, 116, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.cta-section .container { position: relative; z-index: 1; }
+.cta-section h2 { color: var(--white); margin-bottom: 0.5rem; }
+.cta-section p { opacity: 0.9; margin-bottom: 2rem; font-size: 1.1rem; }
+
+/* Contact form */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+.contact-info h3 { color: var(--primary); margin-bottom: 1rem; }
+.contact-item { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.2rem; }
+.contact-icon { width: 44px; height: 44px; background: var(--bg-alt); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
+.contact-item a { color: var(--primary); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+.contact-item a:hover { color: var(--accent); }
+
+.form-group { margin-bottom: 1.2rem; }
+.form-group label { display: block; font-size: 0.9rem; font-weight: 500; margin-bottom: 0.4rem; color: var(--primary); }
+.form-group input, .form-group textarea {
+  width: 100%; padding: 0.9rem 1.2rem; border: 2px solid rgba(26, 60, 52, 0.15);
+  border-radius: var(--radius-sm); font-family: 'Outfit', sans-serif; font-size: 0.95rem;
+  transition: var(--transition); background: var(--white);
+}
+.form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.15); }
+.form-group textarea { resize: vertical; min-height: 120px; }
+.btn-submit {
+  background: var(--primary); color: var(--white); border: none;
+  padding: 1rem 2.5rem; border-radius: 50px; font-family: 'Outfit', sans-serif;
+  font-weight: 600; font-size: 1rem; cursor: pointer; transition: var(--transition); width: 100%;
+}
+.btn-submit:hover { background: var(--accent); }
+
+/* Map */
+.map-container { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); height: 300px; }
+.map-container iframe { width: 100%; height: 100%; border: none; }
+
+/* Footer */
+.footer { background: var(--primary); color: rgba(255,255,255,0.7); padding: 3rem 0 1.5rem; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 2rem; }
+.footer h4 { color: var(--white); font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; margin-bottom: 1rem; }
+.footer p, .footer a { font-size: 0.9rem; }
+.footer a { color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; }
+.footer a:hover { color: var(--accent); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; text-align: center; font-size: 0.85rem; }
+
+/* Floating CTA Mobile */
+.float-cta {
+  display: none; position: fixed; bottom: 1rem; left: 1rem; right: 1rem; z-index: 999;
+  gap: 0.75rem;
+}
+.float-cta .btn-call {
+  flex: 1; background: var(--accent); color: var(--white); text-align: center;
+  padding: 0.9rem; border-radius: 50px; font-weight: 600; text-decoration: none;
+  font-size: 0.95rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+  box-shadow: 0 4px 16px rgba(212, 165, 116, 0.4);
+}
+.float-cta .btn-wa {
+  flex: 1; background: #25D366; color: var(--white); text-align: center;
+  padding: 0.9rem; border-radius: 50px; font-weight: 600; text-decoration: none;
+  font-size: 0.95rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+}
+
+/* Hamburger */
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--primary); margin: 5px 0; transition: var(--transition); }
+
+/* Reveal animations */
+.reveal { opacity: 0; transform: translateY(24px); transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 5rem; }
+  .hero-content { padding: 3rem 5%; order: 2; text-align: center; }
+  .hero-tagline { max-width: 100%; }
+  .hero-cta-group { justify-content: center; }
+  .hero-visual { order: 1; height: 50vh; justify-content: center; }
+  .hero-image-wrapper { width: 80%; aspect-ratio: 16/10; }
+  .hero-float-card { left: 5%; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .gallery-masonry { columns: 2; }
+  .trust-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .nav { display: none; }
+  .header-cta { display: none; }
+  .hamburger { display: block; }
+  .nav.mobile-open {
+    display: flex; flex-direction: column; position: absolute; top: 100%;
+    left: 0; right: 0; background: rgba(245, 240, 235, 0.98);
+    backdrop-filter: blur(12px); padding: 1.5rem; gap: 1rem; box-shadow: var(--shadow);
+  }
+  .hero-visual { height: 40vh; }
+  .hero-image-wrapper { width: 90%; aspect-ratio: 4/3; }
+  .services-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .gallery-masonry { columns: 2; }
+  .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  .float-cta { display: flex; }
+  .hero-tagline { font-size: 1rem; }
+  .trust-bar { padding: 1.5rem 0; }
+  .trust-item .trust-num { font-size: 2rem; }
+  .trust-item .trust-label { font-size: 0.8rem; }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.7rem; }
+  .hero-content { padding: 2rem 4%; }
+  .hero-visual { height: 35vh; }
+  .hero-image-wrapper { width: 100%; aspect-ratio: 4/3; }
+  .hero-float-card { display: none; }
+  .hero-cta-group { flex-direction: column; }
+  .btn-primary, .btn-outline { justify-content: center; padding: 0.9rem 1.5rem; font-size: 0.95rem; }
+  .gallery-masonry { columns: 1; }
+  .trust-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .section { padding: 4rem 0; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Physiotherapy",
+  "name": "+Qterapia Fisioterapia & Osteopatía",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "C. Islas Azores, 1",
+    "addressLocality": "Cáceres",
+    "addressCountry": "ES"
+  },
+  "telephone": "+34653398605",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "128"
+  },
+  "url": "https://www.masqterapia.com/",
+  "priceRange": "€€"
+}
+</script>
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container">
+    <a href="#" class="logo">+<span>Q</span>terapia</a>
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+    <nav>
+      <ul class="nav" id="nav">
+        <li><a href="#servicios">Tratamientos</a></li>
+        <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
+        <li><a href="#opiniones">Opiniones</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <a href="tel:+34653398605" class="header-cta">Pide cita en +Qterapia</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+    <div class="hero-blob hero-blob-3"></div>
+    <div class="pulse-line"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="stars">★★★★★</span>
+        <span>5.0</span>
+        <span class="count">· 128 reseñas</span>
+      </div>
+      <h1>Fisioterapia <em>&</em><br>Osteopatía de precisión<br>en Cáceres</h1>
+      <p class="hero-tagline">Recupera tu movilidad y di adiós al dolor con tratamientos avanzados y un equipo que entiende tu cuerpo. 128 pacientes ya confían en nosotros.</p>
+      <div class="hero-cta-group">
+        <a href="tel:+34653398605" class="btn-primary">📞 Pide cita en +Qterapia</a>
+        <a href="#servicios" class="btn-outline">Ver tratamientos ↓</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&h=1000&fit=crop&crop=center" alt="Fisioterapeuta profesional en +Qterapia Cáceres realizando tratamiento" loading="eager" width="800" height="1000">
+      </div>
+      <div class="hero-float-card">
+        <div class="icon">🎯</div>
+        <div class="label">Primera consulta</div>
+        <div class="value">Diagnóstico gratuito</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="trust-bar">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <div class="trust-num">128+</div>
+          <div class="trust-label">Pacientes satisfechos nos avalan con 5.0★</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-num">10+</div>
+          <div class="trust-label">Años de experiencia en fisioterapia avanzada</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-num">100%</div>
+          <div class="trust-label">Tratamientos personalizados sin recetas genéricas</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-num">24h</div>
+          <div class="trust-label">Primera cita disponible en menos de un día</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section" id="servicios">
+    <div class="container">
+      <p class="section-label reveal">Nuestros tratamientos</p>
+      <h2 class="section-title reveal">Soluciones específicas para tu dolor</h2>
+      <p class="section-subtitle reveal">No hacemos tratamientos genéricos. Cada sesión se diseña tras un diagnóstico preciso de tu caso.</p>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <span class="service-icon">🦴</span>
+          <h3>Fisioterapia Avanzada</h3>
+          <p>Terapia manual, punción seca, electrólisis percutánea y vendaje neuromuscular. Técnicas de última generación para lesiones musculares, articulares y post-quirúrgicas.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="service-icon">🤲</span>
+          <h3>Osteopatía Estructural</h3>
+          <p>Tratamiento integral del sistema musculoesquelético mediante técnicas manuales suaves que restauran el equilibrio corporal y alivian el dolor crónico.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="service-icon">🏃</span>
+          <h3>Rehabilitación Deportiva</h3>
+          <p>Recuperación funcional para deportistas. Prevención de lesiones, readaptación al esfuerzo y optimización del rendimiento deportivo con planes individualizados.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="service-icon">💆</span>
+          <h3>Terapia Miofascial</h3>
+          <p>Liberación de puntos gatillo y restricciones fasciales que causan dolor referido. Ideal para contracturas crónicas, cefaleas tensionales y dolor lumbar.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="service-icon">🩹</span>
+          <h3>Rehabilitación Post-Lesión</h3>
+          <p>Programas completos de recuperación tras esguinces, fracturas, intervenciones quirúrgicas o prótesis. Devolvemos tu funcionalidad paso a paso.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="service-icon">🧘</span>
+          <h3>Ergonomía y Postura</h3>
+          <p>Evaluación postural completa con corrección de hábitos. Tratamos dolores derivados del trabajo sedentario, malas posturas y estrés laboral.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="sobre-nosotros">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image reveal">
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=750&fit=crop&crop=center" alt="Instalaciones de +Qterapia Fisioterapia en Cáceres" loading="lazy" width="600" height="750">
+        </div>
+        <div class="about-content">
+          <p class="section-label reveal">Sobre +Qterapia</p>
+          <h2 class="section-title reveal">No tratamos síntomas, tratamos personas</h2>
+          <p class="reveal" style="color:var(--text-light);margin-bottom:1rem;">En <strong>+Qterapia Fisioterapia & Osteopatía</strong> creemos que cada paciente es único. Nuestro enfoque combina la precisión de la fisioterapia basada en evidencia con la visión global de la osteopatía.</p>
+          <p class="reveal" style="color:var(--text-light);margin-bottom:1.5rem;">Somos un centro con más de 128 pacientes satisfechos que nos han valorado con <strong>5.0★ en Google</strong>. Nuestra misión es devolverte la calidad de vida que el dolor te ha quitado, con un trato cercano, profesional y completamente personalizado.</p>
+          <p class="reveal" style="color:var(--text-light);">Ubicados en <strong>C. Islas Azores, 1, en el corazón de Cáceres</strong>, disponemos de instalaciones modernas y equipamiento de última generación para garantizar tu mejor recuperación.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="opiniones">
+    <div class="container">
+      <p class="section-label reveal">Lo que dicen de nosotros</p>
+      <h2 class="section-title reveal">128 reseñas · 5.0 ★★★★★ en Google</h2>
+      <p class="section-subtitle reveal">La confianza de nuestros pacientes es nuestro mejor aval.</p>
+      <div class="reviews-grid">
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Después de meses con dolor lumbar probé +Qterapia y en 3 sesiones noté una mejoría increíble. Trato excepcional, profesional y muy cercano. 100% recomendado."</p>
+          <div class="review-author">María G.</div>
+          <div class="review-date">Google · hace 2 semanas</div>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Acudí por una fascitis plantar que me tenía desesperado. El diagnóstico fue muy preciso y el tratamiento con punción seca me solucionó el problema en tiempo récord."</p>
+          <div class="review-author">Carlos R.</div>
+          <div class="review-date">Google · hace 1 mes</div>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"La mejor fisioterapia de Cáceres sin duda. Profesionales que saben lo que hacen, instalaciones impecables y resultados visibles desde la primera sesión."</p>
+          <div class="review-author">Laura M.</div>
+          <div class="review-date">Google · hace 3 semanas</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="galeria">
+    <div class="container">
+      <p class="section-label reveal">Galería</p>
+      <h2 class="section-title reveal">Nuestro centro en imágenes</h2>
+      <p class="section-subtitle reveal">Instalaciones modernas y equipadas para tu mejor recuperación en Cáceres.</p>
+      <div class="gallery-masonry reveal">
+        <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=500&h=700&fit=crop" alt="Sala de tratamiento en +Qterapia" loading="lazy" width="500" height="700">
+        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&h=500&fit=crop" alt="Equipamiento de fisioterapia avanzada" loading="lazy" width="500" height="500">
+        <img src="https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=500&h=600&fit=crop" alt="Zona de rehabilitación +Qterapia" loading="lazy" width="500" height="600">
+        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&h=450&fit=crop" alt="Terapia manual en +Qterapia Cáceres" loading="lazy" width="500" height="450">
+        <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a29e?w=500&h=700&fit=crop" alt="Sala de espera +Qterapia" loading="lazy" width="500" height="700">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=500&h=500&fit=crop" alt="Material de fisioterapia profesional" loading="lazy" width="500" height="500">
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section" id="cita">
+    <div class="container">
+      <h2 class="reveal">¿Listo para decir adiós al dolor?</h2>
+      <p class="reveal">Pide tu cita en +Qterapia ahora. Primera consulta con diagnóstico gratuito. Responde en menos de 24 horas.</p>
+      <a href="tel:+34653398605" class="btn-primary reveal" style="background:var(--white);color:var(--primary);font-size:1.1rem;padding:1.1rem 2.5rem;">📞 Llama ahora: 653 39 86 05</a>
+    </div>
+  </section>
+
+  <section class="section" id="contacto">
+    <div class="container">
+      <p class="section-label reveal">Contacto</p>
+      <h2 class="section-title reveal">Hablemos sobre tu caso</h2>
+      <p class="section-subtitle reveal">Cuéntanos qué te ocurre y te responderemos con un plan personalizado.</p>
+      <div class="contact-grid">
+        <div class="reveal">
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <strong>C. Islas Azores, 1</strong><br>
+              <span style="color:var(--text-light)">10001 Cáceres, España</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <a href="tel:+34653398605"><strong>653 39 86 05</strong></a><br>
+              <span style="color:var(--text-light)">Llamada o WhatsApp</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🕐</div>
+            <div>
+              <strong>Lunes a Viernes</strong><br>
+              <span style="color:var(--text-light)">9:00 – 14:00 · 16:00 – 20:00</span>
+            </div>
+          </div>
+        </div>
+        <form class="reveal" action="#" method="POST">
+          <div class="form-group">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Tu teléfono" required>
+          </div>
+          <div class="form-group">
+            <label for="mensaje">¿Qué te ocurre?</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos brevemente tu caso o dolencia..." required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Solicitar cita en +Qterapia →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div class="container reveal" style="margin-top:-2rem; margin-bottom:4rem;">
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3097.640515092672!2d-6.3726731!3d39.4881186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd15e1450f597e1f%3A0xddf6716b51b2dfd8!2s%2BQterapia%20Fisioterapia%20%26%20Osteopat%C3%ADa!5e0!3m2!1ses!2ses!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación de +Qterapia en Cáceres"></iframe>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>+Qterapia</h4>
+        <p style="margin-bottom:0.5rem;">Fisioterapia & Osteopatía en Cáceres</p>
+        <p>C. Islas Azores, 1, 10001 Cáceres</p>
+        <p><a href="tel:+34653398605">653 39 86 05</a></p>
+        <p style="margin-top:0.5rem;">★★★★★ 5.0 · 128 reseñas en Google</p>
+      </div>
+      <div>
+        <h4>Tratamientos</h4>
+        <p><a href="#servicios">Fisioterapia Avanzada</a></p>
+        <p><a href="#servicios">Osteopatía</a></p>
+        <p><a href="#servicios">Rehabilitación Deportiva</a></p>
+        <p><a href="#servicios">Terapia Miofascial</a></p>
+      </div>
+      <div>
+        <h4>Enlaces</h4>
+        <p><a href="#sobre-nosotros">Sobre nosotros</a></p>
+        <p><a href="#opiniones">Opiniones</a></p>
+        <p><a href="#contacto">Contacto</a></p>
+        <p><a href="https://www.google.com/maps/place/+Qterapia+Fisioterapia+%26+Osteopat%C3%ADa/" target="_blank" rel="noopener">Google Maps</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 +Qterapia Fisioterapia & Osteopatía · Cáceres</p>
+    </div>
+  </div>
+</footer>
+
+<div class="float-cta">
+  <a href="tel:+34653398605" class="btn-call">📞 Llamar a +Qterapia</a>
+  <a href="https://wa.me/34653398605" class="btn-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+
+<script>
+const header = document.getElementById('header');
+const hamburger = document.getElementById('hamburger');
+const nav = document.getElementById('nav');
+
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+hamburger.addEventListener('click', () => {
+  nav.classList.toggle('mobile-open');
+});
+
+nav.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => nav.classList.remove('mobile-open'));
+});
+
+const revealElements = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+
+revealElements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

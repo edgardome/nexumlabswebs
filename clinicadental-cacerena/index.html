@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clínica Dental Cacereña — 30 años cuidando sonrisas en Cáceres</title>
+<meta name="description" content="Clínica dental en Cáceres con más de 30 años de experiencia. Dirigida por los doctores Mañanas. Implantes, ortodoncia, estética dental y más. Pide tu cita.">
+<meta name="keywords" content="dentista Cáceres, clínica dental Cáceres, implantes, ortodoncia, doctores Mañanas, Clínica Dental Cacereña, estética dental, PADIEX">
+<meta name="author" content="Clínica Dental Cacereña">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://clinicadentalcacerena.es/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Clínica Dental Cacereña — 30 años cuidando sonrisas">
+<meta property="og:description" content="Clínica dental en Cáceres con más de 30 años de experiencia. Dirigida por los doctores Mañanas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://clinicadentalcacerena.es/">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Clínica Dental Cacereña">
+
+<!-- Schema.org Dentist -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "Clínica Dental Cacereña",
+  "description": "Clínica dental en Cáceres con más de 30 años de experiencia.",
+  "url": "https://clinicadentalcacerena.es/",
+  "telephone": "+34927212277",
+  "email": "info@clinicadentalcacerena.es",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle Gil Cordero 7, esquina Sanguino Michel",
+    "postalCode": "10001",
+    "addressLocality": "Cáceres",
+    "addressCountry": "ES"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.2",
+    "reviewCount": "35"
+  },
+  "openingHours": "Mo-Fr 09:00-20:00"
+}
+</script>
+
+<style>
+/* ===== CRITICAL CSS INLINE ===== */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --coral:#D64045;
+  --coral-dark:#b93539;
+  --warm:#FFF5F0;
+  --navy:#1A1A2E;
+  --navy-light:#252542;
+  --white:#fff;
+  --text:#1A1A2E;
+  --text-light:#555;
+  --heading:'Abril Fatface',cursive,serif;
+  --body:'Manrope',sans-serif;
+  --radius:16px;
+  --radius-sm:8px;
+  --transition:0.3s cubic-bezier(0.25,0.8,0.25,1.2);
+}
+html{scroll-behavior:smooth;font-size:16px;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--body);
+  color:var(--text);
+  background:var(--warm);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+/* ===== STICKY HEADER ===== */
+.site-header{
+  position:sticky;top:0;z-index:1000;
+  background:var(--navy);
+  padding:0 1.5rem;
+  height:72px;
+  display:flex;align-items:center;justify-content:space-between;
+  box-shadow:0 2px 20px rgba(0,0,0,0.15);
+}
+.logo{
+  font-family:var(--heading);
+  font-size:1.5rem;color:var(--white);line-height:1.1;
+  text-decoration:none;letter-spacing:0.02em;
+}
+.logo span{color:var(--coral)}
+.nav-links{display:flex;gap:1.8rem;list-style:none;align-items:center}
+.nav-links a{
+  text-decoration:none;color:rgba(255,255,255,0.85);
+  font-weight:500;font-size:0.95rem;transition:color var(--transition);
+}
+.nav-links a:hover{color:var(--coral)}
+.nav-cta{
+  background:var(--coral);color:var(--white)!important;
+  padding:0.5rem 1.3rem;border-radius:50px;font-weight:700!important;
+  transition:background var(--transition)!important;
+}
+.nav-cta:hover{background:var(--coral-dark)!important;color:#fff!important}
+.hamburger{
+  display:none;flex-direction:column;gap:5px;cursor:pointer;
+  background:none;border:none;padding:8px;z-index:1001;
+}
+.hamburger span{
+  display:block;width:26px;height:2.5px;background:var(--white);
+  border-radius:2px;transition:var(--transition);
+}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
+/* ===== HERO — TYPOGRAPHY FIRST ===== */
+.hero{
+  position:relative;
+  background:var(--navy);
+  min-height:100vh;display:flex;align-items:center;
+  overflow:hidden;
+}
+.hero-coral-block{
+  position:absolute;bottom:0;right:0;
+  width:55%;height:45%;
+  background:var(--coral);
+  clip-path:polygon(15% 0,100% 0,100% 100%,0 100%);
+}
+.hero-circle{
+  position:absolute;
+  top:-120px;right:-80px;
+  width:420px;height:420px;
+  border:3px solid rgba(214,64,69,0.25);
+  border-radius:50%;
+}
+.hero-circle::after{
+  content:'';position:absolute;
+  top:30px;left:30px;
+  width:360px;height:360px;
+  border:2px solid rgba(214,64,69,0.15);
+  border-radius:50%;
+}
+.hero-geo-dot{
+  position:absolute;
+  top:60px;left:10%;
+  width:80px;height:80px;
+  border:2px solid rgba(255,255,255,0.08);
+  border-radius:50%;
+}
+.hero-container{
+  position:relative;z-index:2;
+  max-width:1200px;margin:0 auto;padding:3rem 1.5rem;
+  width:100%;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  background:rgba(255,255,255,0.1);color:var(--white);
+  padding:0.5rem 1.2rem;border-radius:50px;
+  font-size:0.9rem;font-weight:600;margin-bottom:2rem;
+  backdrop-filter:blur(10px);
+}
+.hero-badge .stars{color:#FFB800;letter-spacing:2px}
+.hero-title{
+  font-family:var(--heading);
+  font-size:clamp(2.6rem,7vw,5.5rem);
+  color:var(--white);
+  line-height:1.05;
+  margin-bottom:1.2rem;
+  max-width:900px;
+}
+.hero-title .highlight{
+  display:inline-block;
+  background:var(--coral);
+  padding:0.1em 0.25em;
+  color:var(--white);
+}
+.hero-subtitle{
+  font-size:clamp(1.1rem,2.5vw,1.5rem);
+  color:rgba(255,255,255,0.8);
+  font-weight:400;
+  max-width:600px;
+  margin-bottom:2.5rem;
+  line-height:1.5;
+}
+.hero-subtitle strong{color:var(--coral);font-weight:700}
+.hero-cta{
+  display:inline-block;
+  background:var(--coral);
+  color:var(--white);
+  font-family:var(--heading);
+  font-size:1.2rem;
+  padding:1rem 2.5rem;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:400;
+  letter-spacing:0.02em;
+  transition:all var(--transition);
+  border:2px solid var(--coral);
+}
+.hero-cta:hover{
+  background:transparent;
+  border-color:var(--white);
+  color:var(--white);
+  transform:translateY(-2px);
+}
+
+/* ===== SECTION BASE ===== */
+.section{
+  padding:5rem 1.5rem;
+  position:relative;overflow:hidden;
+}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-label{
+  font-family:var(--body);font-size:0.85rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:0.15em;
+  color:var(--coral);margin-bottom:0.5rem;
+}
+.section-title{
+  font-family:var(--heading);
+  font-size:clamp(2rem,5vw,3.2rem);
+  color:var(--navy);
+  line-height:1.15;
+  margin-bottom:1rem;
+}
+.section-subtitle{
+  font-size:1.1rem;color:var(--text-light);
+  max-width:650px;line-height:1.7;margin-bottom:2.5rem;
+}
+
+/* ===== NUMBERS / TRUST STRIP ===== */
+.trust-strip{
+  background:var(--navy);
+  color:var(--white);
+  padding:0;
+}
+.trust-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+}
+.trust-card{
+  text-align:center;padding:2.5rem 1.5rem;
+  position:relative;
+  border-right:1px solid rgba(255,255,255,0.08);
+}
+.trust-card:last-child{border-right:none}
+.trust-number{
+  font-family:var(--heading);
+  font-size:clamp(3rem,6vw,4.5rem);
+  color:var(--coral);
+  line-height:1;
+  margin-bottom:0.5rem;
+}
+.trust-label{
+  font-weight:500;font-size:0.95rem;
+  opacity:0.85;
+}
+.trust-card::after{
+  content:'';position:absolute;
+  bottom:0;left:50%;transform:translateX(-50%);
+  width:40px;height:3px;background:var(--coral);
+  border-radius:2px;
+}
+
+/* ===== ABOUT ===== */
+.about{
+  background:var(--white);
+  position:relative;
+}
+.about-geo{
+  position:absolute;
+  top:-60px;left:-60px;
+  width:200px;height:200px;
+  border:2px solid rgba(214,64,69,0.1);
+  border-radius:50%;
+}
+.about-content{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:3rem;align-items:center;
+}
+.about-text p{
+  font-size:1.05rem;line-height:1.8;color:var(--text-light);margin-bottom:1.2rem;
+}
+.about-blockquote{
+  font-family:var(--heading);
+  font-size:1.6rem;
+  color:var(--navy);
+  line-height:1.3;
+  padding-left:1.5rem;
+  border-left:5px solid var(--coral);
+  margin:2rem 0 1rem;
+}
+.about-visual{
+  position:relative;
+}
+.about-visual-inner{
+  background:var(--navy);
+  border-radius:var(--radius);
+  padding:3rem 2.5rem;
+  color:var(--white);
+  position:relative;
+  z-index:1;
+}
+.about-visual-inner::before{
+  content:'';position:absolute;
+  top:-15px;right:-15px;
+  width:100%;height:100%;
+  border:3px solid var(--coral);
+  border-radius:var(--radius);
+  z-index:-1;
+}
+.about-year{
+  font-family:var(--heading);
+  font-size:4rem;color:var(--coral);
+  line-height:0.9;margin-bottom:0.5rem;
+}
+.about-year-sub{font-weight:600;font-size:1.1rem;margin-bottom:1.5rem}
+
+/* ===== TEAM ===== */
+.team{background:var(--warm)}
+.team-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:2rem;
+}
+.team-card{
+  background:var(--white);
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:0 4px 30px rgba(0,0,0,0.06);
+  transition:transform var(--transition);
+}
+.team-card:hover{transform:translateY(-6px)}
+.team-img{
+  width:100%;height:300px;object-fit:cover;
+  display:block;
+}
+.team-info{padding:1.8rem}
+.team-name{
+  font-family:var(--heading);
+  font-size:1.6rem;
+  color:var(--navy);
+  line-height:1.2;
+  margin-bottom:0.3rem;
+}
+.team-role{
+  color:var(--coral);font-weight:700;font-size:0.9rem;
+  margin-bottom:1rem;display:block;
+}
+.team-creds{list-style:none}
+.team-creds li{
+  font-size:0.85rem;color:var(--text-light);
+  padding:0.25rem 0;
+  display:flex;gap:0.5rem;
+  line-height:1.5;
+}
+.team-creds li::before{content:'•';color:var(--coral);font-weight:bold}
+
+/* ===== SERVICES ===== */
+.services{background:var(--white)}
+.services-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:1.5rem;
+}
+.service-card{
+  background:var(--warm);
+  border-radius:var(--radius);
+  padding:2rem 1.5rem;
+  text-align:center;
+  transition:all var(--transition);
+  border:1px solid transparent;
+  position:relative;
+  overflow:hidden;
+}
+.service-card::before{
+  content:'';position:absolute;
+  top:-30px;right:-30px;
+  width:80px;height:80px;
+  border:2px solid rgba(214,64,69,0.08);
+  border-radius:50%;
+  transition:border-color var(--transition);
+}
+.service-card:hover{
+  border-color:var(--coral);
+  transform:translateY(-4px);
+  box-shadow:0 8px 30px rgba(214,64,69,0.12);
+}
+.service-card:hover::before{border-color:rgba(214,64,69,0.25)}
+.service-icon{
+  font-size:2.2rem;margin-bottom:0.8rem;position:relative;z-index:1;
+}
+.service-name{
+  font-family:var(--heading);
+  font-size:1.2rem;
+  color:var(--navy);
+  margin-bottom:0.4rem;
+  position:relative;z-index:1;
+}
+.service-desc{
+  font-size:0.85rem;color:var(--text-light);
+  line-height:1.5;
+  position:relative;z-index:1;
+}
+
+/* ===== PADIEX ===== */
+.padiex{
+  background:var(--navy);
+  color:var(--white);
+  position:relative;
+}
+.padiex-geo{
+  position:absolute;
+  bottom:-50px;left:-50px;
+  width:180px;height:180px;
+  border:2px solid rgba(214,64,69,0.2);
+  border-radius:50%;
+}
+.padiex-inner{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:3rem;align-items:center;
+}
+.padiex-badge{
+  display:inline-block;
+  background:var(--coral);
+  padding:0.4rem 1.2rem;
+  border-radius:50px;
+  font-weight:700;font-size:0.85rem;
+  margin-bottom:1.2rem;
+}
+.padiex-title{
+  font-family:var(--heading);
+  font-size:clamp(2rem,4.5vw,3rem);
+  margin-bottom:1rem;
+  line-height:1.15;
+}
+.padiex-text{
+  font-size:1.05rem;opacity:0.9;line-height:1.8;margin-bottom:1.5rem;
+}
+.padiex-cta{
+  display:inline-block;
+  background:var(--coral);
+  color:var(--white);
+  padding:0.85rem 2rem;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:700;
+  font-family:var(--heading);
+  transition:all var(--transition);
+}
+.padiex-cta:hover{background:var(--coral-dark);transform:translateY(-2px)}
+.padiex-visual{
+  background:rgba(255,255,255,0.06);
+  border-radius:var(--radius);
+  padding:3rem;
+  text-align:center;
+  border:1px solid rgba(255,255,255,0.1);
+}
+.padiex-visual .big-num{
+  font-family:var(--heading);
+  font-size:6rem;
+  color:var(--coral);
+  line-height:1;
+}
+
+/* ===== TESTIMONIALS ===== */
+.testimonials{background:var(--warm)}
+.testimonials-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1.5rem;
+}
+.testimonial-card{
+  background:var(--white);
+  border-radius:var(--radius);
+  padding:2rem;
+  position:relative;
+  box-shadow:0 2px 20px rgba(0,0,0,0.04);
+}
+.testimonial-card::before{
+  content:'\201C';
+  font-family:var(--heading);
+  font-size:4rem;
+  color:var(--coral);
+  opacity:0.2;
+  position:absolute;
+  top:10px;left:20px;
+  line-height:1;
+}
+.testimonial-stars{color:#FFB800;margin-bottom:0.8rem;font-size:1rem}
+.testimonial-text{
+  font-size:0.95rem;color:var(--text-light);
+  line-height:1.7;margin-bottom:1.2rem;font-style:italic;
+}
+.testimonial-author{
+  font-weight:700;color:var(--navy);font-size:0.95rem;
+}
+
+/* ===== GALLERY ===== */
+.gallery{background:var(--white)}
+.gallery-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1rem;
+}
+.gallery-item{
+  border-radius:var(--radius);
+  overflow:hidden;
+  aspect-ratio:4/3;
+}
+.gallery-item img{
+  width:100%;height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform 0.5s ease;
+}
+.gallery-item:hover img{transform:scale(1.05)}
+
+/* ===== CONTACT ===== */
+.contact{
+  background:var(--navy);
+  color:var(--white);
+  position:relative;
+}
+.contact-geo{
+  position:absolute;
+  top:-40px;right:-40px;
+  width:150px;height:150px;
+  border:2px solid rgba(214,64,69,0.25);
+  border-radius:50%;
+}
+.contact-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:2.5rem;align-items:start;
+}
+.contact-info-group{
+  display:flex;flex-direction:column;gap:1.5rem;margin-bottom:2rem;
+}
+.contact-item{display:flex;align-items:flex-start;gap:1rem}
+.contact-icon{
+  font-size:1.3rem;flex-shrink:0;
+  width:40px;height:40px;
+  background:var(--coral);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+}
+.contact-text{line-height:1.6}
+.contact-text strong{font-size:1rem;display:block;margin-bottom:0.2rem}
+.contact-text a{color:var(--white);text-decoration:none;opacity:0.9}
+.contact-text a:hover{opacity:1;color:var(--coral)}
+.contact-map{
+  border-radius:var(--radius);
+  overflow:hidden;
+  height:320px;
+  border:2px solid rgba(255,255,255,0.1);
+}
+.contact-map iframe{width:100%;height:100%;border:none;display:block}
+.contact-cta-group{
+  display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem;
+}
+.contact-cta{
+  display:inline-block;
+  background:var(--coral);
+  color:var(--white);
+  padding:0.85rem 2rem;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:700;
+  transition:all var(--transition);
+  font-family:var(--heading);
+}
+.contact-cta:hover{background:var(--coral-dark);transform:translateY(-2px)}
+.contact-cta-outline{
+  background:transparent;
+  border:2px solid var(--white);
+  color:var(--white);
+}
+.contact-cta-outline:hover{background:var(--white);color:var(--navy)}
+.contact-rating{
+  display:flex;align-items:center;gap:0.8rem;
+  margin-top:1.5rem;
+}
+.contact-rating .stars{color:#FFB800;font-size:1.2rem;letter-spacing:2px}
+.contact-rating span{font-weight:600;font-size:1.1rem}
+.contact-rating small{opacity:0.7}
+
+/* ===== CTA FINAL ===== */
+.cta-final{
+  position:relative;
+  background:var(--coral);
+  color:var(--white);
+  text-align:center;
+  padding:5rem 1.5rem;
+  overflow:hidden;
+}
+.cta-final-geo{
+  position:absolute;
+  top:50%;left:50%;transform:translate(-50%,-50%);
+  width:400px;height:400px;
+  border:2px solid rgba(255,255,255,0.12);
+  border-radius:50%;
+  pointer-events:none;
+}
+.cta-final-geo::after{
+  content:'';position:absolute;
+  top:30px;left:30px;
+  width:340px;height:340px;
+  border:2px solid rgba(255,255,255,0.08);
+  border-radius:50%;
+}
+.cta-final-title{
+  font-family:var(--heading);
+  font-size:clamp(2rem,5vw,3.5rem);
+  margin-bottom:1rem;
+  position:relative;z-index:1;
+  line-height:1.15;
+}
+.cta-final-sub{
+  font-size:1.2rem;margin-bottom:2rem;
+  opacity:0.9;
+  position:relative;z-index:1;
+}
+.cta-final-btn{
+  display:inline-block;
+  background:var(--white);
+  color:var(--coral);
+  font-family:var(--heading);
+  font-size:1.2rem;
+  padding:1rem 3rem;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:400;
+  letter-spacing:0.02em;
+  transition:all var(--transition);
+  position:relative;z-index:1;
+}
+.cta-final-btn:hover{
+  background:var(--navy);
+  color:var(--white);
+  transform:translateY(-2px);
+}
+
+/* ===== FOOTER ===== */
+.site-footer{
+  background:var(--navy);
+  color:rgba(255,255,255,0.7);
+  padding:3rem 1.5rem 1.5rem;
+  border-top:1px solid rgba(255,255,255,0.06);
+}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-grid{
+  display:grid;grid-template-columns:2fr 1fr 1fr;
+  gap:2rem;margin-bottom:2rem;
+}
+.footer-brand{
+  font-family:var(--heading);
+  font-size:1.4rem;color:var(--white);
+  margin-bottom:0.8rem;
+  line-height:1.2;
+}
+.footer-brand span{color:var(--coral)}
+.footer-about{font-size:0.9rem;line-height:1.7;margin-bottom:1rem}
+.footer-heading{
+  font-weight:700;color:var(--white);margin-bottom:1rem;font-size:0.95rem;
+}
+.footer-links{list-style:none}
+.footer-links li{margin-bottom:0.5rem}
+.footer-links a{
+  color:rgba(255,255,255,0.7);text-decoration:none;
+  font-size:0.9rem;transition:color var(--transition);
+}
+.footer-links a:hover{color:var(--coral)}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,0.06);
+  padding-top:1.5rem;
+  display:flex;justify-content:space-between;
+  flex-wrap:wrap;gap:1rem;font-size:0.85rem;
+}
+.footer-bottom a{color:var(--coral);text-decoration:none}
+
+/* ===== FLOATING CTA MOBILE ===== */
+.floating-cta{
+  display:none;
+  position:fixed;bottom:20px;left:50%;transform:translateX(-50%);
+  z-index:999;
+  background:var(--coral);
+  color:var(--white);
+  padding:0.8rem 1.8rem;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:700;
+  font-family:var(--heading);
+  font-size:1rem;
+  box-shadow:0 6px 25px rgba(214,64,69,0.5);
+  transition:all var(--transition);
+  white-space:nowrap;
+  letter-spacing:0.02em;
+}
+.floating-cta:hover{transform:translateX(-50%) translateY(-2px)}
+.floating-wa{
+  display:none;
+  position:fixed;bottom:20px;right:20px;
+  z-index:999;
+  width:52px;height:52px;
+  background:#25D366;
+  border-radius:50%;
+  box-shadow:0 4px 20px rgba(37,211,102,0.45);
+  align-items:center;justify-content:center;
+  text-decoration:none;
+  transition:transform var(--transition);
+}
+.floating-wa:hover{transform:scale(1.1)}
+.floating-wa svg{width:24px;height:24px;fill:white}
+
+/* ===== SCROLL REVEAL ===== */
+.reveal{
+  opacity:0;transform:translateY(40px);
+  transition:opacity 0.7s ease,transform 0.7s ease;
+}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* ===== MOBILE NAV ===== */
+.mobile-nav{
+  position:fixed;top:0;left:0;width:100%;height:100vh;
+  background:var(--navy);
+  z-index:999;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  gap:2rem;
+  transform:translateX(100%);
+  transition:transform 0.4s ease;
+}
+.mobile-nav.active{transform:translateX(0)}
+.mobile-nav a{
+  color:var(--white);text-decoration:none;
+  font-size:1.5rem;font-family:var(--heading);
+  transition:color var(--transition);
+}
+.mobile-nav a:hover{color:var(--coral)}
+.mobile-nav .nav-cta-mobile{
+  background:var(--coral);padding:0.8rem 2rem;border-radius:50px;
+  font-family:var(--heading);font-size:1.3rem;
+}
+.mobile-nav .nav-cta-mobile:hover{background:var(--coral-dark)!important;color:#fff!important}
+
+@media(max-width:1024px){
+  .services-grid{grid-template-columns:repeat(3,1fr)}
+  .trust-grid{grid-template-columns:repeat(2,1fr)}
+  .trust-card:nth-child(2){border-right:none}
+}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .hero-coral-block{width:70%;height:35%}
+  .hero-circle{width:260px;height:260px;top:-80px;right:-60px}
+  .hero-circle::after{width:210px;height:210px;top:20px;left:20px}
+  .hero-geo-dot{width:50px;height:50px;top:30px;left:5%}
+  .about-content{grid-template-columns:1fr}
+  .team-grid{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .trust-grid{grid-template-columns:repeat(2,1fr)}
+  .testimonials-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:1fr}
+  .padiex-inner{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .floating-cta{display:block}
+  .floating-wa{display:flex}
+  .section{padding:3rem 1.2rem}
+  .hero{min-height:90vh}
+}
+@media(max-width:480px){
+  .services-grid{grid-template-columns:1fr}
+  .trust-grid{grid-template-columns:1fr;.trust-card{border-right:none}}
+  .gallery-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .contact-cta-group{flex-direction:column}
+  .testimonials-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <a href="#" class="logo">Clínica <span>Dental</span> Cacereña</a>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#equipo">Equipo</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="tel:+34927212277" class="nav-cta">927 21 22 77</a></li>
+    </ul>
+  </nav>
+  <button class="hamburger" aria-label="Abrir menú" onclick="toggleMobileNav()">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#inicio" onclick="toggleMobileNav()">Inicio</a>
+  <a href="#equipo" onclick="toggleMobileNav()">Equipo</a>
+  <a href="#servicios" onclick="toggleMobileNav()">Servicios</a>
+  <a href="#contacto" onclick="toggleMobileNav()">Contacto</a>
+  <a href="tel:+34927212277" class="nav-cta-mobile" onclick="toggleMobileNav()">Llama ahora</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="inicio">
+  <div class="hero-circle"></div>
+  <div class="hero-geo-dot"></div>
+  <div class="hero-coral-block"></div>
+  <div class="hero-container">
+    <div class="hero-badge">★★★★☆ <span style="margin-left:4px">4.2 · 35 reseñas</span></div>
+    <h1 class="hero-title">Clínica Dental<br><span class="highlight">Cacereña</span></h1>
+    <p class="hero-subtitle">30 años cuidando sonrisas en Cáceres.<br><strong>Tu dentista en Cáceres.</strong></p>
+    <a href="tel:+34927212277" class="hero-cta">Pide cita en Clínica Dental Cacereña</a>
+  </div>
+</section>
+
+<!-- ===== TRUST STRIP ===== -->
+<div class="trust-strip">
+  <div class="trust-grid">
+    <div class="trust-card reveal">
+      <div class="trust-number">30</div>
+      <div class="trust-label">Años de experiencia</div>
+    </div>
+    <div class="trust-card reveal">
+      <div class="trust-number">3</div>
+      <div class="trust-label">Doctores Mañanas</div>
+    </div>
+    <div class="trust-card reveal">
+      <div class="trust-number">11</div>
+      <div class="trust-label">Especialidades</div>
+    </div>
+    <div class="trust-card reveal">
+      <div class="trust-number">4.2</div>
+      <div class="trust-label">★★★★☆ · 35 reseñas</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ABOUT ===== -->
+<section class="section about" id="nosotros">
+  <div class="about-geo"></div>
+  <div class="section-inner">
+    <div class="about-content">
+      <div class="about-text reveal">
+        <span class="section-label">Sobre nosotros</span>
+        <h2 class="section-title">Dirigida por los doctores Mañanas</h2>
+        <p>La Clínica Dental Cacereña lleva más de <strong>30 años</strong> ofreciendo un servicio de calidad y atención cercana y personalizada en Cáceres. Somos un <strong>equipo sólido y multidisciplinar</strong> con experiencia y puesta al día en las últimas innovaciones.</p>
+        <p>Dirigida por la familia Mañanas —tres generaciones de doctores— nuestra clínica combina la tradición y el conocimiento acumulado durante décadas con la tecnología más avanzada en odontología.</p>
+        <blockquote class="about-blockquote">"Ofrecemos un servicio de calidad y atención cercana y personalizada."</blockquote>
+        <p>Nuestro compromiso: que cada paciente reciba el mejor tratamiento posible en un entorno de confianza, profesionalidad y cercanía. Porque tu sonrisa es nuestra mejor carta de presentación.</p>
+      </div>
+      <div class="about-visual reveal">
+        <div class="about-visual-inner">
+          <div class="about-year">30</div>
+          <div class="about-year-sub">Años de tradición dental en Cáceres</div>
+          <p style="opacity:0.9;line-height:1.7">Desde nuestra fundación, hemos tratado a miles de pacientes con la misma dedicación y excelencia que nos caracteriza. La confianza de nuestros pacientes es el mejor testimonio de nuestro trabajo.</p>
+          <div style="margin-top:1.5rem;display:flex;gap:1rem;">
+            <span style="background:var(--coral);padding:0.3rem 0.8rem;border-radius:50px;font-size:0.8rem;font-weight:700">PADIEX</span>
+            <span style="background:rgba(255,255,255,0.15);padding:0.3rem 0.8rem;border-radius:50px;font-size:0.8rem;font-weight:700">INVISALIGN</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TEAM ===== -->
+<section class="section team" id="equipo">
+  <div class="section-inner">
+    <span class="section-label">Equipo médico</span>
+    <h2 class="section-title">Los doctores Mañanas</h2>
+    <p class="section-subtitle">Tres generaciones al servicio de la salud dental en Cáceres.</p>
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <img class="team-img" src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=600&h=400&fit=crop&crop=face" alt="Dr. Pedro Mañanas Fernández" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&h=400&fit=crop&crop=face'">
+        <div class="team-info">
+          <h3 class="team-name">Pedro Mañanas Fernández</h3>
+          <span class="team-role">Director Médico</span>
+          <ul class="team-creds">
+            <li>Licenciado en Medicina y Cirugía</li>
+            <li>Doctorado en Estomatología Cum Laude</li>
+            <li>Diplomado en Ortodoncia</li>
+            <li>Especialista en Implantes</li>
+            <li>Colegiado Médico Nº 100002622</li>
+            <li>Colegiado Dentistas Nº 10000312</li>
+          </ul>
+        </div>
+      </div>
+      <div class="team-card reveal">
+        <img class="team-img" src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=600&h=400&fit=crop&crop=face" alt="Dr. Ricardo Mañanas García" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=600&h=400&fit=crop&crop=face'">
+        <div class="team-info">
+          <h3 class="team-name">Ricardo Mañanas García</h3>
+          <span class="team-role">Doctor en Estomatología</span>
+          <ul class="team-creds">
+            <li>Licenciado en Medicina y Cirugía</li>
+            <li>Doctorado en Estomatología Magna Cum Laude</li>
+            <li>Colegiado Médico Nº 100001420</li>
+            <li>Colegiado Dentistas Nº 10000322</li>
+          </ul>
+        </div>
+      </div>
+      <div class="team-card reveal">
+        <img class="team-img" src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&h=400&fit=crop&crop=face" alt="Dr. Pedro Mañanas de Vega" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=600&h=400&fit=crop&crop=face'">
+        <div class="team-info">
+          <h3 class="team-name">Pedro Mañanas de Vega</h3>
+          <span class="team-role">Odontólogo</span>
+          <ul class="team-creds">
+            <li>Licenciado en Odontología</li>
+            <li>Máster en Cirugía Bucal</li>
+            <li>Certificado Invisalign®</li>
+            <li>Colegiado Nº 10000765</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="section services" id="servicios">
+  <div class="section-inner">
+    <span class="section-label">Servicios</span>
+    <h2 class="section-title">Especialidades dentales</h2>
+    <p class="section-subtitle">Un equipo multidisciplinar con las últimas innovaciones para ofrecerte el mejor cuidado dental.</p>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon">🦷</div>
+        <h3 class="service-name">Estética</h3>
+        <p class="service-desc">Mejora la apariencia de tu sonrisa con tratamientos personalizados.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🦷</div>
+        <h3 class="service-name">Ortodoncia</h3>
+        <p class="service-desc">Corrige la alineación dental con técnicas avanzadas e Invisalign®.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🦷</div>
+        <h3 class="service-name">Implantes</h3>
+        <p class="service-desc">Recupera piezas dentales con implantes de última generación.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🦷</div>
+        <h3 class="service-name">Endodoncia</h3>
+        <p class="service-desc">Tratamiento de conductos para salvar dientes dañados.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🦷</div>
+        <h3 class="service-name">Prótesis</h3>
+        <p class="service-desc">Prótesis fijas y removibles adaptadas a cada paciente.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🦷</div>
+        <h3 class="service-name">Cirugía bucal</h3>
+        <p class="service-desc">Intervenciones quirúrgicas con la máxima seguridad y precisión.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🦷</div>
+        <h3 class="service-name">Odontopediatría</h3>
+        <p class="service-desc">Cuidado dental para los más pequeños en un entorno amigable.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🦷</div>
+        <h3 class="service-name">Periodoncia</h3>
+        <p class="service-desc">Tratamiento de encías para una salud bucal completa.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🦷</div>
+        <h3 class="service-name">Blanqueamiento</h3>
+        <p class="service-desc">Devuelve el blanco natural a tus dientes de forma segura.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🦷</div>
+        <h3 class="service-name">Carillas</h3>
+        <p class="service-desc">Carillas dentales para una sonrisa perfecta y natural.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🦷</div>
+        <h3 class="service-name">Ácido Hialurónico</h3>
+        <p class="service-desc">Tratamientos estéticos faciales con ácido hialurónico.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PADIEX ===== -->
+<section class="section padiex" id="padiex">
+  <div class="padiex-geo"></div>
+  <div class="section-inner">
+    <div class="padiex-inner">
+      <div class="reveal">
+        <span class="padiex-badge">PADIEX</span>
+        <h2 class="padiex-title">Programa de Atención Dental Infantil</h2>
+        <p class="padiex-text">En Clínica Dental Cacereña participamos en el programa PADIEX, el programa de atención dental infantil de Extremadura. Cuidamos la salud bucodental de los más pequeños con la experiencia y cercanía que nos caracteriza.</p>
+        <a href="tel:+34927212277" class="padiex-cta">Infórmate en Clínica Dental Cacereña</a>
+      </div>
+      <div class="padiex-visual reveal">
+        <div class="big-num">PADI</div>
+        <p style="opacity:0.8;font-size:1.1rem;font-weight:600">Programa de Atención Dental Infantil de Extremadura</p>
+        <p style="opacity:0.65;margin-top:0.8rem">Atención especializada para niños y adolescentes</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="section testimonials" id="opiniones">
+  <div class="section-inner">
+    <span class="section-label">Opiniones</span>
+    <h2 class="section-title">Lo que dicen nuestros pacientes</h2>
+    <p class="section-subtitle">La confianza de nuestros pacientes es nuestro mayor orgullo.</p>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">Llevo más de 20 años viniendo a esta clínica. Los doctores Mañanas son increíbles profesionales y el trato es inmejorable. Recomiendo Clínica Dental Cacereña sin dudarlo.</p>
+        <div class="testimonial-author">— María G.</div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">Me hicieron un implante y el resultado ha sido espectacular. El Dr. Pedro Mañanas es un experto. Trato cercano y profesional, se nota la experiencia de 30 años.</p>
+        <div class="testimonial-author">— Javier R.</div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">★★★★☆</div>
+        <p class="testimonial-text">Muy contenta con mi tratamiento de ortodoncia Invisalign. La clínica está muy bien equipada y el equipo es muy atento. Los recomiendo totalmente.</p>
+        <div class="testimonial-author">— Laura S.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section class="section gallery" id="galeria">
+  <div class="section-inner">
+    <span class="section-label">Galería</span>
+    <h2 class="section-title">Nuestra clínica</h2>
+    <p class="section-subtitle">Instalaciones modernas y equipadas con la última tecnología.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=600&fit=crop" alt="Clínica Dental Cacereña - Recepción" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&h=600&fit=crop" alt="Clínica Dental Cacereña - Consulta" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=600&fit=crop" alt="Clínica Dental Cacereña - Equipamiento" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&h=600&fit=crop" alt="Clínica Dental Cacereña - Sala de espera" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=800&h=600&fit=crop" alt="Clínica Dental Cacereña - Tecnología" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1616391182219-e080b4d1043a?w=800&h=600&fit=crop" alt="Clínica Dental Cacereña - Interior" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section contact" id="contacto">
+  <div class="contact-geo"></div>
+  <div class="section-inner">
+    <span class="section-label" style="color:var(--coral)">Contacto</span>
+    <h2 class="section-title" style="color:var(--white)">Visítanos en Cáceres</h2>
+    <p class="section-subtitle" style="color:rgba(255,255,255,0.75)">Estamos en el centro de Cáceres. Pide tu cita y ven a conocernos.</p>
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="contact-info-group">
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-text">
+              <strong>Dirección</strong>
+              Calle Gil Cordero 7, esquina Sanguino Michel<br>10001 Cáceres
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div class="contact-text">
+              <strong>Teléfono</strong>
+              <a href="tel:+34927212277">927 21 22 77</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div class="contact-text">
+              <strong>Email</strong>
+              <a href="mailto:info@clinicadentalcacerena.es">info@clinicadentalcacerena.es</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-rating">
+          <span class="stars">★★★★☆</span>
+          <span>4.2</span>
+          <small>· 35 reseñas en Google</small>
+        </div>
+        <div class="contact-cta-group">
+          <a href="tel:+34927212277" class="contact-cta">Llamar a Clínica Dental Cacereña</a>
+          <a href="mailto:info@clinicadentalcacerena.es" class="contact-cta contact-cta-outline">Enviar email</a>
+        </div>
+      </div>
+      <div class="contact-map reveal">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3101.87654321!2d-6.3700!3d39.4700!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sMzkqMjcqMDguMCBOIDAyKjA0KjIxLjggVw!5e0!3m2!1ses!2ses!4v1600000000000" title="Ubicación de Clínica Dental Cacereña" loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA FINAL ===== -->
+<section class="cta-final" id="cita">
+  <div class="cta-final-geo"></div>
+  <div class="cta-final-geo" style="width:280px;height:280px;opacity:0.6"></div>
+  <div class="section-inner" style="position:relative;z-index:2">
+    <h2 class="cta-final-title">Confía en 30 años<br>de experiencia</h2>
+    <p class="cta-final-sub">Pide tu cita hoy en Clínica Dental Cacereña.<br>Tu sonrisa merece lo mejor.</p>
+    <a href="tel:+34927212277" class="cta-final-btn">Pide cita en Clínica Dental Cacereña</a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Clínica <span>Dental</span> Cacereña</div>
+        <p class="footer-about">30 años de tradición dental en Cáceres. Dirigida por los doctores Mañanas. Ofrecemos un servicio de calidad y atención cercana y personalizada.</p>
+        <p style="font-size:0.85rem">★★★★☆ 4.2 · 35 reseñas</p>
+      </div>
+      <div>
+        <div class="footer-heading">Servicios</div>
+        <ul class="footer-links">
+          <li><a href="#servicios">Estética dental</a></li>
+          <li><a href="#servicios">Ortodoncia</a></li>
+          <li><a href="#servicios">Implantes</a></li>
+          <li><a href="#servicios">Endodoncia</a></li>
+          <li><a href="#servicios">Cirugía bucal</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Contacto</div>
+        <ul class="footer-links">
+          <li><a href="tel:+34927212277">927 21 22 77</a></li>
+          <li><a href="mailto:info@clinicadentalcacerena.es">info@clinicadentalcacerena.es</a></li>
+          <li><span>C/ Gil Cordero 7, Cáceres</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Clínica Dental Cacereña. Todos los derechos reservados.</span>
+      <span><a href="#">Aviso legal</a> · <a href="#">Privacidad</a> · <a href="#">Cookies</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== FLOATING MOBILE CTAs ===== -->
+<a href="tel:+34927212277" class="floating-cta">📞 Pide cita</a>
+<a href="https://wa.me/34927212277" class="floating-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+/* ===== MOBILE NAV TOGGLE ===== */
+function toggleMobileNav(){
+  document.getElementById('mobileNav').classList.toggle('active');
+  document.querySelector('.hamburger').classList.toggle('active');
+  document.body.style.overflow =
+    document.getElementById('mobileNav').classList.contains('active') ? 'hidden' : '';
+}
+
+/* ===== SCROLL REVEAL ===== */
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})
+},{threshold:0.15});
+
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+/* ===== STICKY HEADER SHADOW ON SCROLL ===== */
+window.addEventListener('scroll',()=>{
+  const header = document.querySelector('.site-header');
+  if(window.scrollY>50) header.style.boxShadow = '0 4px 30px rgba(0,0,0,0.3)';
+  else header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.15)';
+});
+
+/* ===== SMOOTH SCROLL FOR ALL ANCHOR LINKS ===== */
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+  anchor.addEventListener('click',function(e){
+    const target = document.querySelector(this.getAttribute('href'));
+    if(target){
+      e.preventDefault();
+      target.scrollIntoView({behavior:'smooth',block:'start'});
+    }
+  });
+});
+</script>
+</body>
+</html>

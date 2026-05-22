@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NexumLabs Webs — Webs Profesionales para Negocios de Cáceres</title>
+<meta name="description" content="20 webs profesionales single-page generadas para negocios de Cáceres. Fisioterapia, clínicas dentales, podología, abogados, talleres, inmobiliarias y más.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0F0F1A;
+  --card: #1A1A2E;
+  --accent: #6C63FF;
+  --accent2: #00D2FF;
+  --text: #E8E8EE;
+  --text-dim: #8888A0;
+  --radius: 14px;
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Outfit', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+.header {
+  padding: 2.5rem 0 1.5rem;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(108,99,255,0.08) 0%, transparent 100%);
+}
+.header h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.02em;
+}
+.header p {
+  color: var(--text-dim);
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+.header .badge {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  margin-top: 1rem; padding: 0.4rem 1rem;
+  background: rgba(108,99,255,0.12); border-radius: 50px;
+  font-size: 0.85rem; color: var(--accent2);
+}
+.container { width: 90%; max-width: 1300px; margin: 0 auto; }
+.stats {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;
+  padding: 2rem 0 1rem; text-align: center;
+}
+.stat-num {
+  font-size: 1.8rem; font-weight: 800;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.stat-label { font-size: 0.85rem; color: var(--text-dim); margin-top: 0.2rem; }
+.grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.2rem; padding: 1.5rem 0 3rem;
+}
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: var(--transition);
+  text-decoration: none;
+  color: var(--text);
+  display: flex; flex-direction: column; gap: 0.6rem;
+  position: relative; overflow: hidden;
+}
+.card::before {
+  content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 0;
+  background: linear-gradient(180deg, var(--accent), var(--accent2));
+  transition: height var(--transition); border-radius: 0 0 4px 0;
+}
+.card:hover { border-color: rgba(108,99,255,0.3); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(108,99,255,0.08); }
+.card:hover::before { height: 100%; }
+.card .sector {
+  font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--accent); font-weight: 600;
+}
+.card h3 { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.01em; }
+.card .meta {
+  display: flex; align-items: center; gap: 0.8rem; font-size: 0.85rem; color: var(--text-dim);
+}
+.card .stars { color: #F5A623; letter-spacing: 1px; }
+.card .priority {
+  font-size: 0.7rem; padding: 0.2rem 0.6rem; border-radius: 50px;
+  font-weight: 600; margin-left: auto;
+}
+.priority-alta { background: rgba(255,59,48,0.15); color: #FF3B30; }
+.priority-media { background: rgba(255,149,0,0.15); color: #FF9500; }
+.priority-baja { background: rgba(52,199,89,0.15); color: #34C759; }
+.card .link-hint {
+  font-size: 0.8rem; color: var(--accent2); opacity: 0;
+  transition: opacity var(--transition); margin-top: auto;
+}
+.card:hover .link-hint { opacity: 1; }
+.footer {
+  text-align: center; padding: 3rem 0; color: var(--text-dim);
+  font-size: 0.85rem; border-top: 1px solid rgba(255,255,255,0.05);
+}
+.footer a { color: var(--accent2); text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+
+@media (max-width: 768px) {
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>NexumLabs Webs</h1>
+  <p>Webs profesionales single-page para negocios de Cáceres</p>
+  <div class="badge">🚀 20 webs · 8 sectores · Diseños únicos</div>
+</div>
+
+<div class="container">
+  <div class="stats">
+    <div><div class="stat-num">20</div><div class="stat-label">Webs generadas</div></div>
+    <div><div class="stat-num">8</div><div class="stat-label">Sectores distintos</div></div>
+    <div><div class="stat-num">20</div><div class="stat-label">Diseños únicos</div></div>
+    <div><div class="stat-num">100%</div><div class="stat-label">Mobile-first</div></div>
+  </div>
+
+  <div class="grid">
+
+    <a href="qterapia-fisioterapia/" class="card">
+      <span class="sector">Fisioterapia</span>
+      <h3>+Qterapia Fisioterapia & Osteopatía</h3>
+      <div class="meta">
+        <span class="stars">★★★★★</span> 5.0 · 128 reseñas
+        <span class="priority priority-alta">Alta</span>
+      </div>
+      <span class="link-hint">Ver web →</span>
+    </a>
+
+    <a href="podologia-beatriz-martin/" class="card">
+      <span class="sector">Podología</span>
+      <h3>Centro Podología Beatriz Martín Lorenzo</h3>
+      <div class="meta">
+        <span class="stars">★★★★★</span> 5.0 · 212 reseñas
+        <span class="priority priority-alta">Alta</span>
+      </div>
+      <span class="link-hint">Ver web →</span>
+    </a>
+
+    <a href="clinicadental-marian-santos/" class="card">
+      <span class="sector">Clínica dental</span>
+      <h3>Clínica Dental Marian Santos</h3>
+      <div class="meta">
+        <span class="stars">★★★★★</span> 5.0 · 188 reseñas
+        <span class="priority priority-alta">Alta</span>
+      </div>
+      <span class="link-hint">Ver web →</span>
+    </a>
+
+    <a href="rpm-motorsport/" class="card">
+      <span class="sector">Taller mecánico</span>
+      <h3>RPM Motorsport</h3>
+      <div class="meta">
+        <span class="stars">★★★★★</span> 5.0 · 104 reseñas
+        <span class="priority priority-alta">Alta</span>
+      </div>
+      <span class="link-hint">Ver web →</span>
+    </a>
+
+    <a href="emilio-cortes-abogados/" class="card">
+      <span class="sector">Abogados</span>
+      <h3>Emilio Cortés Abogados Penalistas</h3>
+      <div class="meta">
+        <span class="stars">★★★★☆</span> 4.5 · 28 reseñas
+        <span class="priority priority-alta">Alta</span>
+      </div>
+      <span class="link-hint">Ver web →</span>
+    </a>
+
+    <a href="maredent/" class="card">
+      <span class="sector">Clínica dental</span>
+      <h3>Maredent Clínica Dental</h3>
+      <div class="meta">
+        <span class="stars">★★★★★</span> 4.9 · 205 reseñas
+        <span class="priority priority-alta">Alta</span>
+      </div>
+      <span class="link-hint">Ver web →</span>
+    </a>
+
+    <a href="md-extranjeria/" class="card">
+      <span class="sector">Abogados / Extranjería</span>
+      <h3>MD Extranjería Despacho Jurídico</h3>
+      <div class="meta">
+        <span class="stars">★★★★★</span> 5.0 · 24 reseñas
+        <span class="priority priority-alta">Alta</span>
+      </div>
+      <span class="link-hint">Ver web →</span>
+    </a>
+
+    <a href="podoceres/" class="card">
+      <span class="sector">Podología</span>
+      <h3>PODOCERES (El podólogo de Pinilla)</h3>
+      <div class="meta">
+        <span class="stars">★★★★★</span> 5.0 · 123 reseñas
+        <span class="priority priority-alta">Alta</span>
+      </div>
+      <span class="link-hint">Ver web →</span>
+    </a>
+
+    <a href="fisioplus-caceres/" class="card">
+      <span class="sector">Fisioterapia</span>
+      <h3>Fisioplus Cáceres</h3>
+      <div class="meta">
+        <span class="stars">★★★★★</span> 5.0 · 211 reseñas
+        <span class="priority priority-alta">Alta</span>
+      </div>
+      <span class="link-hint">Ver web →</span>
+    </a>
+
+    <a href="clinicadental-cacerena/" class="card">
+      <span class="sector">Clínica dental</span>
+      <h3>Clínica Dental Cacereña</h3>
+      <div class="meta">
+        <span class="stars">★★★★☆</span> 4.2 · 35 reseñas
+        <span class="priority priority-alta">Alta</span>
+      </div>
+      <span class="link-hint">Ver web →</span>
+    </a>
+
+    <a href="centrodental-parque-principe/" class="card">
+      <span class="sector">Clínica dental</span>
+      <h3>Centro Dental Parque del Príncipe</h3>
+      <div class="meta">
+        <span class="stars">★★★★★</span> 4.6 · 38 reseñas
+        <span class="priority priority-alta">Alta</span>
+      </div>
+      <span class="link-hint">Ver web →</span>
+    </a>
+
+    <a href="fisioterapia-almudena-marquez/" class="card">
+      <span class="sector">Fisioterapia</span>
+      <h3>Fisioterapia Almudena Márquez</h3>
+      <div class="meta">
+        <span class="stars">★★★★★</span> 4.9 · 45 reseñas
+        <span class="priority priority-alta">Alta</span>
+      </div>
+      <span class="link-hint">Ver web →</span>
+    </a>
+
+    <a href="podoclinic-caceres/" class="card">
+      <span class="sector">Podología</span>
+      <h3>Podoclinic Cáceres</h3>
+      <div class="meta">
+        <span class="stars">★★★★★</span> 4.6 · 19 reseñas
+        <span class="priority priority-alta">Alta</span>
+      </div>
+      <span class="link-hint">Ver web →</span>
+    </a>
+
+    <a href="panadero-abogados/" class="card">
+      <span class="sector">Abogados</span>
+      <h3>Panadero Abogados</h3>
+      <div class="meta">
+        <span class="stars">★★★★★</span> 4.6 · 33 reseñas
+        <span class="priority priority-media">Media</span>
+      </div>
+      <span class="link-hint">Ver web →</span>
+    </a>
+
+    <a href="clinicadental-canovas/" class="card">
+      <span class="sector">Clínica dental</span>
+      <h3>Clínica Dental Cánovas</h3>
+      <div class="meta">
+        <span class="stars">★★★★☆</span> 4.4 · 19 reseñas
+        <span class="priority priority-media">Media</span>
+      </div>
+      <span class="link-hint">Ver web →</span>
+    </a>
+
+    <a href="javier-bravo-fisioterapia/" class="card">
+      <span class="sector">Fisioterapia</span>
+      <h3>Javier Bravo Fisioterapia</h3>
+      <div class="meta">
+        <span class="stars">★★★★★</span> 4.9 · 151 reseñas
+        <span class="priority priority-media">Media</span>
+      </div>
+      <span class="link-hint">Ver web →</span>
+    </a>
+
+    <a href="nexus-inmo/" class="card">
+      <span class="sector">Inmobiliaria</span>
+      <h3>NEXUS INMO</h3>
+      <div class="meta">
+        <span class="stars">★★★★★</span> 4.7 · 249 reseñas
+        <span class="priority priority-media">Media</span>
+      </div>
+      <span class="link-hint">Ver web →</span>
+    </a>
+
+    <a href="gestoria-galfex/" class="card">
+      <span class="sector">Asesoría / Gestoría</span>
+      <h3>Gestoria Galfex</h3>
+      <div class="meta">
+        <span class="stars">★★★★☆</span> 4.0 · 8 reseñas
+        <span class="priority priority-media">Media</span>
+      </div>
+      <span class="link-hint">Ver web →</span>
+    </a>
+
+    <a href="gabinete-asesor-cacereno/" class="card">
+      <span class="sector">Asesoría / Gestoría</span>
+      <h3>Gabinete Asesor Cacereño</h3>
+      <div class="meta">
+        <span class="stars">★★★★☆</span> 4.0 · 16 reseñas
+        <span class="priority priority-baja">Baja</span>
+      </div>
+      <span class="link-hint">Ver web →</span>
+    </a>
+
+    <a href="doblea-asesores/" class="card">
+      <span class="sector">Asesoría</span>
+      <h3>Doble A Asesores</h3>
+      <div class="meta">
+        <span class="stars">★★★★★</span> 4.8 · 55 reseñas
+        <span class="priority priority-baja">Baja</span>
+      </div>
+      <span class="link-hint">Ver web →</span>
+    </a>
+
+  </div>
+</div>
+
+<footer class="footer">
+  <p>Generado por <a href="https://github.com/edgardome/nexumlabswebs">NexumLabs</a> · Webs profesionales single-page · Cáceres 2026</p>
+</footer>
+
+</body>
+</html>
