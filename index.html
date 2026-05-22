@@ -3,349 +3,823 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NexumLabs Webs — Webs Profesionales para Negocios de Cáceres</title>
-<meta name="description" content="20 webs profesionales single-page generadas para negocios de Cáceres. Fisioterapia, clínicas dentales, podología, abogados, talleres, inmobiliarias y más.">
+<title>NexumLabs — 20 Webs para Leads de Cáceres | Panel de Control</title>
+<meta name="description" content="Panel completo de 20 leads cualificados de Cáceres con webs profesionales generadas. Scoring, problemas detectados, ganchos de venta y datos de contacto.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #0F0F1A;
-  --card: #1A1A2E;
+  --bg: #08080F;
+  --surface: #111118;
+  --surface2: #1A1A24;
+  --border: #252530;
+  --text: #E4E4EC;
+  --text2: #9898A8;
+  --text3: #686878;
   --accent: #6C63FF;
   --accent2: #00D2FF;
-  --text: #E8E8EE;
-  --text-dim: #8888A0;
-  --radius: 14px;
-  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --red: #FF4757;
+  --orange: #FFA502;
+  --green: #2ED573;
+  --yellow: #FFD93D;
+  --radius: 10px;
+  --radius-sm: 6px;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; font-size: 15px; }
 body {
   font-family: 'Outfit', system-ui, sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.6;
-  min-height: 100vh;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 .header {
-  padding: 2.5rem 0 1.5rem;
-  text-align: center;
-  background: linear-gradient(180deg, rgba(108,99,255,0.08) 0%, transparent 100%);
+  background: linear-gradient(180deg, rgba(108,99,255,0.06) 0%, transparent 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 1.5rem 0; position: sticky; top: 0; z-index: 100;
+  backdrop-filter: blur(12px);
 }
-.header h1 {
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  font-weight: 800;
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  letter-spacing: -0.02em;
-}
-.header p {
-  color: var(--text-dim);
-  font-size: 1.1rem;
-  margin-top: 0.5rem;
-}
-.header .badge {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  margin-top: 1rem; padding: 0.4rem 1rem;
-  background: rgba(108,99,255,0.12); border-radius: 50px;
-  font-size: 0.85rem; color: var(--accent2);
-}
-.container { width: 90%; max-width: 1300px; margin: 0 auto; }
-.stats {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;
-  padding: 2rem 0 1rem; text-align: center;
-}
-.stat-num {
-  font-size: 1.8rem; font-weight: 800;
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.stat-label { font-size: 0.85rem; color: var(--text-dim); margin-top: 0.2rem; }
-.grid {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 1.2rem; padding: 1.5rem 0 3rem;
-}
-.card {
-  background: var(--card);
-  border-radius: var(--radius);
-  padding: 1.5rem;
-  border: 1px solid rgba(255,255,255,0.05);
-  transition: var(--transition);
-  text-decoration: none;
-  color: var(--text);
-  display: flex; flex-direction: column; gap: 0.6rem;
-  position: relative; overflow: hidden;
-}
-.card::before {
-  content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 0;
-  background: linear-gradient(180deg, var(--accent), var(--accent2));
-  transition: height var(--transition); border-radius: 0 0 4px 0;
-}
-.card:hover { border-color: rgba(108,99,255,0.3); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(108,99,255,0.08); }
-.card:hover::before { height: 100%; }
-.card .sector {
-  font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em;
-  color: var(--accent); font-weight: 600;
-}
-.card h3 { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.01em; }
-.card .meta {
-  display: flex; align-items: center; gap: 0.8rem; font-size: 0.85rem; color: var(--text-dim);
-}
-.card .stars { color: #F5A623; letter-spacing: 1px; }
-.card .priority {
-  font-size: 0.7rem; padding: 0.2rem 0.6rem; border-radius: 50px;
-  font-weight: 600; margin-left: auto;
-}
-.priority-alta { background: rgba(255,59,48,0.15); color: #FF3B30; }
-.priority-media { background: rgba(255,149,0,0.15); color: #FF9500; }
-.priority-baja { background: rgba(52,199,89,0.15); color: #34C759; }
-.card .link-hint {
-  font-size: 0.8rem; color: var(--accent2); opacity: 0;
-  transition: opacity var(--transition); margin-top: auto;
-}
-.card:hover .link-hint { opacity: 1; }
-.footer {
-  text-align: center; padding: 3rem 0; color: var(--text-dim);
-  font-size: 0.85rem; border-top: 1px solid rgba(255,255,255,0.05);
-}
-.footer a { color: var(--accent2); text-decoration: none; }
-.footer a:hover { text-decoration: underline; }
+.header-inner { max-width: 1500px; margin: 0 auto; padding: 0 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.logo { font-size: 1.3rem; font-weight: 800; background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.stats-row { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+.stat-pill { display: flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; color: var(--text2); }
+.stat-pill b { color: var(--text); font-size: 1rem; }
+.stat-pill .dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; }
+.dot-alta { background: var(--red); }
+.dot-media { background: var(--orange); }
+.dot-baja { background: var(--green); }
 
+.container { max-width: 1500px; margin: 0 auto; padding: 0 1.5rem; }
+
+/* Filters */
+.filters { padding: 1.2rem 0; display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: center; }
+.filter-btn {
+  background: var(--surface); border: 1px solid var(--border); color: var(--text2);
+  padding: 0.45rem 1rem; border-radius: 50px; font-size: 0.8rem; cursor: pointer;
+  font-family: 'Outfit', sans-serif; transition: all 0.2s;
+}
+.filter-btn:hover { border-color: var(--accent); color: var(--text); }
+.filter-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.search-input {
+  background: var(--surface); border: 1px solid var(--border); color: var(--text);
+  padding: 0.45rem 1rem; border-radius: 50px; font-size: 0.8rem; font-family: 'Outfit', sans-serif;
+  width: 220px; outline: none; transition: border-color 0.2s;
+}
+.search-input:focus { border-color: var(--accent); }
+.search-input::placeholder { color: var(--text3); }
+
+/* Score badge */
+.score-badge {
+  display: inline-flex; align-items: center; gap: 0.3rem;
+  padding: 0.2rem 0.6rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+}
+.score-1 { background: rgba(255,71,87,0.15); color: var(--red); }
+.score-2 { background: rgba(255,71,87,0.12); color: #ff6b7a; }
+.score-3 { background: rgba(255,160,2,0.15); color: var(--orange); }
+.score-4 { background: rgba(255,160,2,0.1); color: #ffb733; }
+.score-5 { background: rgba(46,213,115,0.12); color: var(--green); }
+
+/* Card */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: all 0.2s;
+}
+.card:hover { border-color: rgba(108,99,255,0.3); box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+
+.card-header {
+  padding: 1.2rem 1.4rem; cursor: pointer; display: flex;
+  justify-content: space-between; align-items: flex-start; gap: 1rem;
+  user-select: none;
+}
+.card-header:hover { background: var(--surface2); }
+.card-header-left { flex: 1; min-width: 0; }
+.card-header-right { display: flex; align-items: center; gap: 0.6rem; flex-shrink: 0; }
+
+.card-name { font-size: 1.05rem; font-weight: 700; letter-spacing: -0.01em; }
+.card-sector { font-size: 0.75rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; margin-bottom: 0.2rem; }
+.card-meta { display: flex; align-items: center; gap: 0.8rem; margin-top: 0.3rem; flex-wrap: wrap; }
+.card-meta span { font-size: 0.78rem; color: var(--text2); }
+.stars-display { color: var(--yellow); letter-spacing: 1px; font-size: 0.85rem; }
+.priority-tag {
+  font-size: 0.68rem; padding: 0.15rem 0.5rem; border-radius: 50px; font-weight: 700; text-transform: uppercase;
+}
+.p-alta { background: rgba(255,71,87,0.15); color: var(--red); }
+.p-media { background: rgba(255,160,2,0.15); color: var(--orange); }
+.p-baja { background: rgba(46,213,115,0.15); color: var(--green); }
+
+.expand-icon { font-size: 0.9rem; color: var(--text3); transition: transform 0.25s; flex-shrink: 0; }
+.card.open .expand-icon { transform: rotate(180deg); color: var(--accent); }
+
+.card-body { display: none; padding: 0 1.4rem 1.4rem; border-top: 1px solid var(--border); }
+.card.open .card-body { display: block; }
+
+.card-body { display: none; }
+.card.open .card-body { display: block; }
+
+/* Inside card */
+.info-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem; }
+.info-block { background: var(--surface2); border-radius: var(--radius-sm); padding: 1rem; border: 1px solid var(--border); }
+.info-block h4 { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text3); margin-bottom: 0.6rem; font-weight: 600; }
+
+/* Contact row */
+.contact-row { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0.75rem; }
+.contact-item { font-size: 0.82rem; color: var(--text2); display: flex; align-items: center; gap: 0.35rem; }
+.contact-item a { color: var(--accent2); text-decoration: none; }
+.contact-item a:hover { text-decoration: underline; }
+
+/* Scoring mini bars */
+.score-row { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.score-item {
+  display: flex; flex-direction: column; align-items: center; gap: 0.2rem;
+  background: var(--surface); border-radius: var(--radius-sm); padding: 0.45rem 0.5rem;
+  min-width: 52px; border: 1px solid var(--border);
+}
+.score-label { font-size: 0.6rem; color: var(--text3); text-transform: uppercase; letter-spacing: 0.06em; }
+.score-val { font-size: 1rem; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+.score-lo { color: var(--red); }
+.score-mid { color: var(--orange); }
+.score-hi { color: var(--green); }
+
+/* Problems list */
+.problem-list { list-style: none; }
+.problem-list li {
+  font-size: 0.82rem; color: var(--text2); padding: 0.35rem 0; border-bottom: 1px solid var(--border);
+  display: flex; align-items: flex-start; gap: 0.5rem;
+}
+.problem-list li:last-child { border-bottom: none; }
+.problem-list li::before { content: '⚠'; color: var(--orange); flex-shrink: 0; font-size: 0.85rem; }
+
+.gancho-block {
+  background: linear-gradient(135deg, rgba(108,99,255,0.06), rgba(0,210,255,0.04));
+  border: 1px solid rgba(108,99,255,0.15); border-radius: var(--radius-sm);
+  padding: 0.8rem 1rem; margin-top: 0.75rem; font-size: 0.82rem;
+  color: var(--text2); font-style: italic;
+}
+.gancho-block::before { content: '💡 '; }
+
+.facturacion { font-size: 0.82rem; color: var(--text2); margin-top: 0.5rem; }
+.facturacion strong { color: var(--text); }
+
+.link-group { display: flex; gap: 0.5rem; margin-top: 0.75rem; flex-wrap: wrap; }
+.link-btn {
+  background: var(--surface); border: 1px solid var(--border); color: var(--text);
+  padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.78rem; text-decoration: none;
+  font-family: 'Outfit', sans-serif; transition: all 0.2s; display: inline-flex; align-items: center; gap: 0.3rem;
+}
+.link-btn:hover { border-color: var(--accent); background: var(--surface2); }
+.link-btn.accent { background: var(--accent); color: #fff; border-color: var(--accent); }
+.link-btn.accent:hover { background: #7B73FF; }
+
+/* Grid */
+.cards-grid { display: flex; flex-direction: column; gap: 0.75rem; padding: 1rem 0 3rem; }
+
+.footer { text-align: center; padding: 2rem 0; color: var(--text3); font-size: 0.82rem; border-top: 1px solid var(--border); }
+
+/* Responsive */
 @media (max-width: 768px) {
-  .stats { grid-template-columns: repeat(2, 1fr); }
-  .grid { grid-template-columns: 1fr; }
+  .header-inner { flex-direction: column; align-items: flex-start; }
+  .stats-row { gap: 0.8rem; }
+  .info-grid { grid-template-columns: 1fr; }
+  .score-row { justify-content: center; }
+  .card-header { flex-direction: column; }
 }
 </style>
 </head>
 <body>
 
 <div class="header">
-  <h1>NexumLabs Webs</h1>
-  <p>Webs profesionales single-page para negocios de Cáceres</p>
-  <div class="badge">🚀 20 webs · 8 sectores · Diseños únicos</div>
+  <div class="header-inner">
+    <span class="logo">NexumLabs — Leads Cáceres</span>
+    <div class="stats-row">
+      <span class="stat-pill">📊 <b>120</b> analizados</span>
+      <span class="stat-pill">✅ <b>20</b> cualificados</span>
+      <span class="stat-pill"><span class="dot dot-alta"></span> <b>13</b> alta</span>
+      <span class="stat-pill"><span class="dot dot-media"></span> <b>5</b> media</span>
+      <span class="stat-pill"><span class="dot dot-baja"></span> <b>2</b> baja</span>
+      <span class="stat-pill">📅 22/05/2026</span>
+    </div>
+  </div>
 </div>
 
 <div class="container">
-  <div class="stats">
-    <div><div class="stat-num">20</div><div class="stat-label">Webs generadas</div></div>
-    <div><div class="stat-num">8</div><div class="stat-label">Sectores distintos</div></div>
-    <div><div class="stat-num">20</div><div class="stat-label">Diseños únicos</div></div>
-    <div><div class="stat-num">100%</div><div class="stat-label">Mobile-first</div></div>
+  <div class="filters">
+    <span style="font-size:0.8rem;color:var(--text3);margin-right:0.5rem;">Filtrar:</span>
+    <button class="filter-btn active" onclick="filterCards('all')">Todos (20)</button>
+    <button class="filter-btn" onclick="filterCards('Fisioterapia')">Fisioterapia (4)</button>
+    <button class="filter-btn" onclick="filterCards('Clínica dental')">Clínica dental (5)</button>
+    <button class="filter-btn" onclick="filterCards('Podología')">Podología (3)</button>
+    <button class="filter-btn" onclick="filterCards('Abogados')">Abogados (3)</button>
+    <button class="filter-btn" onclick="filterCards('Taller')">Taller (1)</button>
+    <button class="filter-btn" onclick="filterCards('Inmobiliaria')">Inmobiliaria (1)</button>
+    <button class="filter-btn" onclick="filterCards('Asesoría')">Asesoría (3)</button>
+    <input type="text" class="search-input" placeholder="🔍 Buscar negocio..." oninput="searchCards(this.value)">
   </div>
-
-  <div class="grid">
-
-    <a href="qterapia-fisioterapia/" class="card">
-      <span class="sector">Fisioterapia</span>
-      <h3>+Qterapia Fisioterapia & Osteopatía</h3>
-      <div class="meta">
-        <span class="stars">★★★★★</span> 5.0 · 128 reseñas
-        <span class="priority priority-alta">Alta</span>
-      </div>
-      <span class="link-hint">Ver web →</span>
-    </a>
-
-    <a href="podologia-beatriz-martin/" class="card">
-      <span class="sector">Podología</span>
-      <h3>Centro Podología Beatriz Martín Lorenzo</h3>
-      <div class="meta">
-        <span class="stars">★★★★★</span> 5.0 · 212 reseñas
-        <span class="priority priority-alta">Alta</span>
-      </div>
-      <span class="link-hint">Ver web →</span>
-    </a>
-
-    <a href="clinicadental-marian-santos/" class="card">
-      <span class="sector">Clínica dental</span>
-      <h3>Clínica Dental Marian Santos</h3>
-      <div class="meta">
-        <span class="stars">★★★★★</span> 5.0 · 188 reseñas
-        <span class="priority priority-alta">Alta</span>
-      </div>
-      <span class="link-hint">Ver web →</span>
-    </a>
-
-    <a href="rpm-motorsport/" class="card">
-      <span class="sector">Taller mecánico</span>
-      <h3>RPM Motorsport</h3>
-      <div class="meta">
-        <span class="stars">★★★★★</span> 5.0 · 104 reseñas
-        <span class="priority priority-alta">Alta</span>
-      </div>
-      <span class="link-hint">Ver web →</span>
-    </a>
-
-    <a href="emilio-cortes-abogados/" class="card">
-      <span class="sector">Abogados</span>
-      <h3>Emilio Cortés Abogados Penalistas</h3>
-      <div class="meta">
-        <span class="stars">★★★★☆</span> 4.5 · 28 reseñas
-        <span class="priority priority-alta">Alta</span>
-      </div>
-      <span class="link-hint">Ver web →</span>
-    </a>
-
-    <a href="maredent/" class="card">
-      <span class="sector">Clínica dental</span>
-      <h3>Maredent Clínica Dental</h3>
-      <div class="meta">
-        <span class="stars">★★★★★</span> 4.9 · 205 reseñas
-        <span class="priority priority-alta">Alta</span>
-      </div>
-      <span class="link-hint">Ver web →</span>
-    </a>
-
-    <a href="md-extranjeria/" class="card">
-      <span class="sector">Abogados / Extranjería</span>
-      <h3>MD Extranjería Despacho Jurídico</h3>
-      <div class="meta">
-        <span class="stars">★★★★★</span> 5.0 · 24 reseñas
-        <span class="priority priority-alta">Alta</span>
-      </div>
-      <span class="link-hint">Ver web →</span>
-    </a>
-
-    <a href="podoceres/" class="card">
-      <span class="sector">Podología</span>
-      <h3>PODOCERES (El podólogo de Pinilla)</h3>
-      <div class="meta">
-        <span class="stars">★★★★★</span> 5.0 · 123 reseñas
-        <span class="priority priority-alta">Alta</span>
-      </div>
-      <span class="link-hint">Ver web →</span>
-    </a>
-
-    <a href="fisioplus-caceres/" class="card">
-      <span class="sector">Fisioterapia</span>
-      <h3>Fisioplus Cáceres</h3>
-      <div class="meta">
-        <span class="stars">★★★★★</span> 5.0 · 211 reseñas
-        <span class="priority priority-alta">Alta</span>
-      </div>
-      <span class="link-hint">Ver web →</span>
-    </a>
-
-    <a href="clinicadental-cacerena/" class="card">
-      <span class="sector">Clínica dental</span>
-      <h3>Clínica Dental Cacereña</h3>
-      <div class="meta">
-        <span class="stars">★★★★☆</span> 4.2 · 35 reseñas
-        <span class="priority priority-alta">Alta</span>
-      </div>
-      <span class="link-hint">Ver web →</span>
-    </a>
-
-    <a href="centrodental-parque-principe/" class="card">
-      <span class="sector">Clínica dental</span>
-      <h3>Centro Dental Parque del Príncipe</h3>
-      <div class="meta">
-        <span class="stars">★★★★★</span> 4.6 · 38 reseñas
-        <span class="priority priority-alta">Alta</span>
-      </div>
-      <span class="link-hint">Ver web →</span>
-    </a>
-
-    <a href="fisioterapia-almudena-marquez/" class="card">
-      <span class="sector">Fisioterapia</span>
-      <h3>Fisioterapia Almudena Márquez</h3>
-      <div class="meta">
-        <span class="stars">★★★★★</span> 4.9 · 45 reseñas
-        <span class="priority priority-alta">Alta</span>
-      </div>
-      <span class="link-hint">Ver web →</span>
-    </a>
-
-    <a href="podoclinic-caceres/" class="card">
-      <span class="sector">Podología</span>
-      <h3>Podoclinic Cáceres</h3>
-      <div class="meta">
-        <span class="stars">★★★★★</span> 4.6 · 19 reseñas
-        <span class="priority priority-alta">Alta</span>
-      </div>
-      <span class="link-hint">Ver web →</span>
-    </a>
-
-    <a href="panadero-abogados/" class="card">
-      <span class="sector">Abogados</span>
-      <h3>Panadero Abogados</h3>
-      <div class="meta">
-        <span class="stars">★★★★★</span> 4.6 · 33 reseñas
-        <span class="priority priority-media">Media</span>
-      </div>
-      <span class="link-hint">Ver web →</span>
-    </a>
-
-    <a href="clinicadental-canovas/" class="card">
-      <span class="sector">Clínica dental</span>
-      <h3>Clínica Dental Cánovas</h3>
-      <div class="meta">
-        <span class="stars">★★★★☆</span> 4.4 · 19 reseñas
-        <span class="priority priority-media">Media</span>
-      </div>
-      <span class="link-hint">Ver web →</span>
-    </a>
-
-    <a href="javier-bravo-fisioterapia/" class="card">
-      <span class="sector">Fisioterapia</span>
-      <h3>Javier Bravo Fisioterapia</h3>
-      <div class="meta">
-        <span class="stars">★★★★★</span> 4.9 · 151 reseñas
-        <span class="priority priority-media">Media</span>
-      </div>
-      <span class="link-hint">Ver web →</span>
-    </a>
-
-    <a href="nexus-inmo/" class="card">
-      <span class="sector">Inmobiliaria</span>
-      <h3>NEXUS INMO</h3>
-      <div class="meta">
-        <span class="stars">★★★★★</span> 4.7 · 249 reseñas
-        <span class="priority priority-media">Media</span>
-      </div>
-      <span class="link-hint">Ver web →</span>
-    </a>
-
-    <a href="gestoria-galfex/" class="card">
-      <span class="sector">Asesoría / Gestoría</span>
-      <h3>Gestoria Galfex</h3>
-      <div class="meta">
-        <span class="stars">★★★★☆</span> 4.0 · 8 reseñas
-        <span class="priority priority-media">Media</span>
-      </div>
-      <span class="link-hint">Ver web →</span>
-    </a>
-
-    <a href="gabinete-asesor-cacereno/" class="card">
-      <span class="sector">Asesoría / Gestoría</span>
-      <h3>Gabinete Asesor Cacereño</h3>
-      <div class="meta">
-        <span class="stars">★★★★☆</span> 4.0 · 16 reseñas
-        <span class="priority priority-baja">Baja</span>
-      </div>
-      <span class="link-hint">Ver web →</span>
-    </a>
-
-    <a href="doblea-asesores/" class="card">
-      <span class="sector">Asesoría</span>
-      <h3>Doble A Asesores</h3>
-      <div class="meta">
-        <span class="stars">★★★★★</span> 4.8 · 55 reseñas
-        <span class="priority priority-baja">Baja</span>
-      </div>
-      <span class="link-hint">Ver web →</span>
-    </a>
-
-  </div>
+  <div class="cards-grid" id="cardsGrid"></div>
 </div>
 
 <footer class="footer">
-  <p>Generado por <a href="https://github.com/edgardome/nexumlabswebs">NexumLabs</a> · Webs profesionales single-page · Cáceres 2026</p>
+  Criterios: Cáceres (radio 50 km) · scoring ≤ 7 · facturación ≥ 3.000€/mes<br>
+  Descartados: 35 sin web, 28 franquicias, 15 facturación insuficiente, 22 scoring ≥ 7<br>
+  <a href="https://github.com/edgardome/nexumlabswebs" style="color:var(--accent2)">github.com/edgardome/nexumlabswebs</a>
 </footer>
+
+<script>
+const leads = [
+  {
+    id: "qterapia-fisioterapia",
+    nombre: "+Qterapia Fisioterapia & Osteopatía",
+    sector: "Fisioterapia",
+    direccion: "C. Islas Azores, 1, Cáceres",
+    telefono: "653 39 86 05",
+    email: null,
+    web_actual: "https://www.masqterapia.com/",
+    google_maps: "https://www.google.com/maps/place/+Qterapia+Fisioterapia+%26+Osteopat%C3%ADa/",
+    resenas: 128,
+    valoracion: 5.0,
+    facturacion: "4.000 – 7.000 €/mes",
+    razon_facturacion: "128 reseñas con 5.0★, alta demanda. Sesiones de 30-50€. Alta rotación de pacientes.",
+    scoring: 1,
+    desglose: { diseno:1, movil:1, velocidad:1, seo:2, ux:1, cta:1 },
+    problemas: [
+      "El dominio masqterapia.com NO está conectado a ninguna web (página Wix sin publicar)",
+      "La web no existe funcionalmente — pierden todos los clientes que buscan online",
+      "Sin presencia web propia, solo existen en Google Maps"
+    ],
+    gancho: "He intentado visitar vuestra web (masqterapia.com) y no carga nada: el dominio no está conectado. Con 128 reseñas y 5.0★, estáis perdiendo clientes cada día. Os ayudo a tener vuestra web funcionando en 48h.",
+    prioridad: "alta"
+  },
+  {
+    id: "podologia-beatriz-martin",
+    nombre: "Centro de Podología Beatriz Martín Lorenzo",
+    sector: "Podología",
+    direccion: "Calle Oporto, Centro Comercial Ruta de la Plata, 2, portal 7, 1°A, Cáceres",
+    telefono: "696 61 49 64",
+    email: "centropodologia@gmail.com",
+    web_actual: "http://www.centrodepodologia.com/",
+    google_maps: "https://www.google.com/maps/place/Centro+de+Podolog%C3%ADa+Beatriz+Mart%C3%ADn+Lorenzo/",
+    resenas: 212,
+    valoracion: 5.0,
+    facturacion: "5.000 – 10.000 €/mes",
+    razon_facturacion: "212 reseñas con 5.0★, ticket medio alto (40-80€ por sesión). Excelente reputación.",
+    scoring: 1,
+    desglose: { diseno:2, movil:1, velocidad:1, seo:2, ux:2, cta:1 },
+    problemas: [
+      "191 errores de JavaScript en la consola — web prácticamente rota",
+      "Diseño extremadamente básico y lento, aparentemente abandonado",
+      "Sin CTAs funcionales ni formularios de contacto operativos"
+    ],
+    gancho: "He visitado centrodepodologia.com y tiene 191 errores técnicos que la hacen casi inservible. Con 212 reseñas y 5.0★, vuestra web no refleja vuestra excelente reputación.",
+    prioridad: "alta"
+  },
+  {
+    id: "clinicadental-marian-santos",
+    nombre: "Clínica Dental Marian Santos",
+    sector: "Clínica dental",
+    direccion: "C. San Juan de Dios, 5, 10001 Cáceres",
+    telefono: "638 88 01 60",
+    email: "info@clinicadentalmariansantos.com",
+    web_actual: "https://www.clinicadentalmariansantos.com/",
+    google_maps: "https://www.google.com/maps/place/Cl%C3%ADnica+dental+Dra.+Marian+Santos/",
+    resenas: 188,
+    valoracion: 5.0,
+    facturacion: "6.000 – 10.000 €/mes",
+    razon_facturacion: "188 reseñas con 5.0★. Odontología ticket medio alto (50-200€ por visita). Alta rotación.",
+    scoring: 2,
+    desglose: { diseno:2, movil:3, velocidad:5, seo:2, ux:2, cta:3 },
+    problemas: [
+      "La web está en construcción: 'Estamos trabajando en mejorar nuestro sitio web'",
+      "Solo muestra datos de contacto básicos — sin contenido ni CTAs",
+      "Sin portfolio, ni blog, ni información de servicios",
+      "Sin llamadas a la acción para pedir cita online"
+    ],
+    gancho: "Vi que vuestra web está en construcción y no refleja vuestra calidad (5.0★ en Google). Necesitáis una web profesional que convierta visitas en pacientes.",
+    prioridad: "alta"
+  },
+  {
+    id: "rpm-motorsport",
+    nombre: "RPM Motorsport",
+    sector: "Taller mecánico",
+    direccion: "Av. Héroes de Baler, 1, Cáceres",
+    telefono: "664 53 62 96",
+    email: null,
+    web_actual: "https://www.rpm-motorsport.es/",
+    google_maps: "https://www.google.com/maps/place/Taller+mec%C3%A1nico+en+C%C3%A1ceres+-+RPM+Motorsport/",
+    resenas: 104,
+    valoracion: 5.0,
+    facturacion: "5.000 – 10.000 €/mes",
+    razon_facturacion: "104 reseñas con 5.0★. Taller especializado, ticket alto en reparaciones.",
+    scoring: 2,
+    desglose: { diseno:1, movil:1, velocidad:1, seo:3, ux:1, cta:1 },
+    problemas: [
+      "Web NO CARGA — error 522 Connection timed out de Cloudflare",
+      "Web totalmente caída, sin servicio",
+      "Pierden clientes potenciales cada día por falta de presencia online"
+    ],
+    gancho: "Tu web (rpm-motorsport.es) está completamente caída (error 522). Con 104 reseñas y 5.0★, estás perdiendo clientes cada día. Te ayudo a tener una web funcional en 48h.",
+    prioridad: "alta"
+  },
+  {
+    id: "emilio-cortes-abogados",
+    nombre: "Emilio Cortés Abogados Penalistas",
+    sector: "Abogados",
+    direccion: "Pl. de América, 4, 1 Izq, Cáceres",
+    telefono: "927 21 72 10",
+    email: "emiliocortesabogados@gmail.com",
+    web_actual: "https://www.emiliocortesabogadospenalistas.com/",
+    google_maps: "https://www.google.com/maps/place/Emilio+Cort%C3%A9s+Abogados+Penalistas/",
+    resenas: 28,
+    valoracion: 4.5,
+    facturacion: "4.000 – 8.000 €/mes",
+    razon_facturacion: "Abogado penalista con 28 reseñas. Honorarios altos por caso. Estimación conservadora.",
+    scoring: 2,
+    desglose: { diseno:2, movil:3, velocidad:4, seo:2, ux:2, cta:2 },
+    problemas: [
+      "Web casi vacía: solo página de inicio con email, teléfono y enlaces sin contenido",
+      "Sin información de servicios, áreas de práctica ni equipo",
+      "Sin CTAs ni formulario de contacto: solo email y teléfono",
+      "Sin blog ni contenido de valor para captar clientes"
+    ],
+    gancho: "Vuestra web está prácticamente vacía y no transmite vuestra experiencia como penalistas. Con un rediseño podríais captar muchos más clientes desde Google.",
+    prioridad: "alta"
+  },
+  {
+    id: "maredent",
+    nombre: "Maredent Clínica Dental",
+    sector: "Clínica dental",
+    direccion: "Av. Antonio Hurtado, 20, BAJO, 10002 Cáceres",
+    telefono: "668 52 53 22",
+    email: "sonrie@maredent.com",
+    web_actual: "http://www.maredent.com/",
+    google_maps: "https://www.google.com/maps/place/Maredent+Cl%C3%ADnica+Dental/",
+    resenas: 205,
+    valoracion: 4.9,
+    facturacion: "8.000 – 15.000 €/mes",
+    razon_facturacion: "205 reseñas, 4.9★, clínica consolidada desde 2011. Ticket dental alto.",
+    scoring: 3,
+    desglose: { diseno:3, movil:3, velocidad:5, seo:4, ux:4, cta:3 },
+    problemas: [
+      "Sin certificado SSL (HTTP) — riesgo de seguridad y penalización SEO",
+      "Diseño básico de plantilla — copyright desde 2011",
+      "URLs con caracteres acentuados (¿Hablamos?, Quiénes-somos) — pésimo para SEO"
+    ],
+    gancho: "Tu web maredent.com sigue en HTTP y parece no haber cambiado desde 2011. Con 205 reseñas, merecéis una web profesional con SSL y diseño moderno.",
+    prioridad: "alta"
+  },
+  {
+    id: "md-extranjeria",
+    nombre: "MD Extranjería Despacho Jurídico",
+    sector: "Abogados / Extranjería",
+    direccion: "Av. Virgen de la Montaña, 1, Cáceres",
+    telefono: "652 42 13 48",
+    email: "pura@mdextranjeria.es",
+    web_actual: "http://mdextranjeria.es/",
+    google_maps: "https://www.google.com/maps/place/MD+Extranjer%C3%ADa+Despacho+Jur%C3%ADdico/",
+    resenas: 24,
+    valoracion: 5.0,
+    facturacion: "4.000 – 8.000 €/mes",
+    razon_facturacion: "Abogados de extranjería con honorarios medios-altos. Mercado nicho con buena demanda.",
+    scoring: 3,
+    desglose: { diseno:3, movil:3, velocidad:4, seo:3, ux:3, cta:2 },
+    problemas: [
+      "Diseño muy básico, contenido mínimo en página principal",
+      "Sin apenas información sobre servicios ni equipo",
+      "CTAs débiles, sin formulario de contacto visible",
+      "Sin blog ni contenidos de valor sobre extranjería"
+    ],
+    gancho: "Vuestra web tiene muy poco contenido para un despacho de extranjería. Los clientes buscan información detallada online antes de contratar. Podemos ayudaros a crear una web que atraiga y convierta.",
+    prioridad: "alta"
+  },
+  {
+    id: "podoceres",
+    nombre: "PODOCERES (El podólogo de Pinilla)",
+    sector: "Podología",
+    direccion: "C. Sorolla, 6, Cáceres",
+    telefono: "630 86 91 84",
+    email: "PODOCERES@HOTMAIL.COM",
+    web_actual: "https://podologocaceres.wixsite.com/podoceres",
+    google_maps: "https://www.google.com/maps/place/PODOCERES/",
+    resenas: 123,
+    valoracion: 5.0,
+    facturacion: "4.000 – 7.000 €/mes",
+    razon_facturacion: "123 reseñas con 5.0★. Podología con ticket medio de 40-60€ por sesión.",
+    scoring: 3,
+    desglose: { diseno:3, movil:3, velocidad:4, seo:2, ux:3, cta:3 },
+    problemas: [
+      "Web hecha en Wix con banner 'Crea tu web hoy' visible — aspecto amateur",
+      "Dominio Wix genérico (wixsite.com) — poco profesional",
+      "Navegación básica y diseño de plantilla sin personalizar",
+      "Sin integración de reserva online ni sistema de citas"
+    ],
+    gancho: "Vuestra web actual es un Wix genérico con dominio gratuito wixsite.com. Con 123 reseñas y 5.0★, os merecéis un dominio propio y una web profesional.",
+    prioridad: "alta"
+  },
+  {
+    id: "fisioplus-caceres",
+    nombre: "Fisioplus Cáceres",
+    sector: "Fisioterapia",
+    direccion: "C. Sta. Luisa de Marillac, 12, Cáceres",
+    telefono: "615 20 19 59",
+    email: "info@fisio-plus.es",
+    web_actual: "http://www.fisio-plus.es/",
+    google_maps: "https://www.google.com/maps/place/Fisioplus+C%C3%A1ceres/",
+    resenas: 211,
+    valoracion: 5.0,
+    facturacion: "5.000 – 9.000 €/mes",
+    razon_facturacion: "211 reseñas con 5.0★, centro desde 2010. Fisioterapia con alta demanda y ticket medio.",
+    scoring: 3,
+    desglose: { diseno:3, movil:3, velocidad:4, seo:3, ux:3, cta:2 },
+    problemas: [
+      "Página web extremadamente básica con menos de 100 palabras de contenido",
+      "Sin estructura de navegación ni páginas internas",
+      "Sin fotos de instalaciones, equipo ni tratamientos",
+      "Sin CTAs claros para pedir cita"
+    ],
+    gancho: "He visto vuestra web y es muy básica para un centro con 211 reseñas. Una web profesional os ayudaría a transmitir confianza y captar más pacientes online.",
+    prioridad: "alta"
+  },
+  {
+    id: "clinicadental-cacerena",
+    nombre: "Clínica Dental Cacereña",
+    sector: "Clínica dental",
+    direccion: "Calle Gil Cordero 7, esquina Sanguino Michel, 10001 Cáceres",
+    telefono: "927 21 22 77",
+    email: "info@clinicadentalcacerena.es",
+    web_actual: "https://www.clinicadentalcacerena.es/",
+    google_maps: "https://www.google.com/maps/place/Cl%C3%ADnica+Dental+Cacere%C3%B1a/",
+    resenas: 35,
+    valoracion: 4.2,
+    facturacion: "3.000 – 6.000 €/mes",
+    razon_facturacion: "35 reseñas, 4.2★. Clínica con 30+ años de experiencia. Ticket dental alto.",
+    scoring: 4,
+    desglose: { diseno:3, movil:4, velocidad:5, seo:4, ux:5, cta:2 },
+    problemas: [
+      "Navegación rota: todos los enlaces del menú apuntan a la misma página",
+      "Sin CTAs — no hay botones 'Pedir cita' ni 'Llámanos' visibles",
+      "Diseño de plantilla básica sin personalización de marca"
+    ],
+    gancho: "Los enlaces de vuestra web no funcionan correctamente. Con 30 años de experiencia, vuestra web debería transmitir la misma confianza que ofrecéis en consulta.",
+    prioridad: "alta"
+  },
+  {
+    id: "centrodental-parque-principe",
+    nombre: "Centro Dental Parque del Príncipe",
+    sector: "Clínica dental",
+    direccion: "C. Islas Azores, 17, Cáceres",
+    telefono: "927 23 86 20",
+    email: "contacto@centrodentalparquedelprincipe.com",
+    web_actual: "https://centrodentalparquedelprincipe.com/",
+    google_maps: "https://www.google.com/maps/place/Centro+Dental+Parque+del+Pr%C3%ADncipe/",
+    resenas: 38,
+    valoracion: 4.6,
+    facturacion: "4.000 – 7.000 €/mes",
+    razon_facturacion: "38 reseñas, 4.6★. Clínica con 25 años de trayectoria. Ticket dental alto.",
+    scoring: 4,
+    desglose: { diseno:4, movil:3, velocidad:5, seo:3, ux:4, cta:3 },
+    problemas: [
+      "Título con error ortográfico: 'Prncipe' en lugar de 'Príncipe' — penalización SEO",
+      "Texto del hero con formato roto: 'C I T A P R E V I A' letras separadas",
+      "Estructura de navegación confusa y CTAs poco visibles"
+    ],
+    gancho: "He visto que vuestra web tiene errores que lastran vuestra imagen (título con errata, texto fragmentado). Con 25 años de experiencia, merecéis una web profesional.",
+    prioridad: "alta"
+  },
+  {
+    id: "fisioterapia-almudena-marquez",
+    nombre: "Fisioterapia Almudena Márquez",
+    sector: "Fisioterapia",
+    direccion: "C. de Maluquer, 2, Cáceres",
+    telefono: "927 77 20 63",
+    email: "info@fisioterapiacaceres.es",
+    web_actual: "https://fisioterapiacaceres.es/",
+    google_maps: "https://www.google.com/maps/place/Fisioterapia+y+Osteopat%C3%ADa+Almudena+Marqu%C3%A9z/",
+    resenas: 45,
+    valoracion: 4.9,
+    facturacion: "3.000 – 6.000 €/mes",
+    razon_facturacion: "45 reseñas con 4.9★. Fisioterapeuta con buena reputación. Ticket medio por sesión.",
+    scoring: 4,
+    desglose: { diseno:4, movil:4, velocidad:4, seo:3, ux:4, cta:3 },
+    problemas: [
+      "Web tipo plantilla 'Powered by...' sin personalización de marca",
+      "Diseño genérico que no trasmite la especialización ni la confianza",
+      "Sin fotografía profesional del equipo ni del centro",
+      "CTAs genéricos y poco efectivos"
+    ],
+    gancho: "Vuestra web usa una plantilla genérica que no refleja vuestra especialización. Con 4.9★ en Google, una web profesional os ayudaría a destacar.",
+    prioridad: "alta"
+  },
+  {
+    id: "podoclinic-caceres",
+    nombre: "Podoclinic Cáceres",
+    sector: "Podología",
+    direccion: "C. Prof. Rodríguez Moñino, 3, LOCAL, Cáceres",
+    telefono: "927 22 66 91",
+    email: null,
+    web_actual: "https://www.podoclinic-caceres.es/",
+    google_maps: "https://www.google.com/maps/place/Podoclinic/",
+    resenas: 19,
+    valoracion: 4.6,
+    facturacion: "3.000 – 5.000 €/mes",
+    razon_facturacion: "19 reseñas, 4.6★. Clínica pequeña pero con ticket medio en podología.",
+    scoring: 4,
+    desglose: { diseno:4, movil:4, velocidad:4, seo:4, ux:4, cta:3 },
+    problemas: [
+      "Diseño funcional pero desactualizado y sin personalidad de marca",
+      "Sin sistema de reserva de citas online",
+      "CTAs mejorables: solo 'Conócenos' y 'Pedir información' sin urgencia",
+      "Sin blog ni contenido de valor sobre cuidados podológicos"
+    ],
+    gancho: "Vuestra web cumple lo básico pero no convierte. Incluir reserva online y un diseño más profesional os ayudaría a atraer más pacientes.",
+    prioridad: "alta"
+  },
+  {
+    id: "panadero-abogados",
+    nombre: "Panadero Abogados",
+    sector: "Abogados",
+    direccion: "Calle Gómez Becerra, 3, 2ªPLANTA, Cáceres",
+    telefono: "655 59 73 74",
+    email: null,
+    web_actual: "https://panaderoabogados.com/",
+    google_maps: "https://www.google.com/maps/place/Panadero+Abogados/",
+    resenas: 33,
+    valoracion: 4.6,
+    facturacion: "4.000 – 8.000 €/mes",
+    razon_facturacion: "33 reseñas, 4.6★. Despacho de abogados con honorarios medios-altos.",
+    scoring: 4,
+    desglose: { diseno:4, movil:4, velocidad:5, seo:5, ux:4, cta:4 },
+    problemas: [
+      "Diseño básico y text-heavy, sin elementos visuales diferenciales",
+      "Falta de personalidad de marca y elementos de confianza (fotos del equipo)",
+      "Sin blog jurídico ni contenido de valor para posicionar en Google"
+    ],
+    gancho: "Vuestra web es funcional pero muy básica para un despacho de abogados. Un diseño más profesional y contenido legal de calidad os daría más visibilidad y clientes.",
+    prioridad: "media"
+  },
+  {
+    id: "clinicadental-canovas",
+    nombre: "Clínica Dental Cánovas",
+    sector: "Clínica dental",
+    direccion: "Av. de España, 18, 1ºB, 10001 Cáceres",
+    telefono: "927 22 49 67",
+    email: null,
+    web_actual: "https://clinicadentalcanovas.es/",
+    google_maps: "https://www.google.com/maps/place/Cl%C3%ADnica+Dental+Canovas+en+C%C3%A1ceres/",
+    resenas: 19,
+    valoracion: 4.4,
+    facturacion: "3.000 – 5.000 €/mes",
+    razon_facturacion: "19 reseñas (volumen bajo), 4.4★. Clínica pequeña pero ticket dental alto.",
+    scoring: 4,
+    desglose: { diseno:4, movil:4, velocidad:3, seo:4, ux:5, cta:3 },
+    problemas: [
+      "WordPress con Revslider que ralentiza la carga excesivamente",
+      "Sin CTAs visibles para pedir cita o contactar directamente",
+      "Diseño genérico sin personalización de marca"
+    ],
+    gancho: "Vuestra web es lenta (carga un slider pesado) y no tiene botones para pedir cita. Podemos optimizarla para que sea rápida y convierta visitas en pacientes.",
+    prioridad: "media"
+  },
+  {
+    id: "javier-bravo-fisioterapia",
+    nombre: "Javier Bravo Fisioterapia",
+    sector: "Fisioterapia",
+    direccion: "C/ Sanguino Michel, 25, Cáceres",
+    telefono: "605 86 69 77",
+    email: "fisioterapia.javierbravo@gmail.com",
+    web_actual: "https://fisioterapiajavierbravo.com/",
+    google_maps: "https://www.google.com/maps/place/Javier+Bravo+Fisioterapia/",
+    resenas: 151,
+    valoracion: 4.9,
+    facturacion: "4.000 – 7.000 €/mes",
+    razon_facturacion: "151 reseñas con 4.9★. Fisioterapeuta consolidado con excelente reputación.",
+    scoring: 4,
+    desglose: { diseno:4, movil:4, velocidad:5, seo:4, ux:4, cta:3 },
+    problemas: [
+      "Diseño simple, sin elementos visuales atractivos ni diferenciación",
+      "Sin fotos del centro ni del equipo",
+      "Sin sistema de reserva online de citas",
+      "CTAs débiles para convertir visitantes en pacientes"
+    ],
+    gancho: "Con 151 reseñas y 4.9★ eres un referente, pero tu web no lo refleja. Un diseño más profesional con reserva online te ayudaría a captar más pacientes.",
+    prioridad: "media"
+  },
+  {
+    id: "nexus-inmo",
+    nombre: "NEXUS INMO (pisosencaceres.es)",
+    sector: "Inmobiliaria",
+    direccion: "C. Rafael Garcia Plata de Osma, 5, Cáceres",
+    telefono: "927 77 11 17",
+    email: null,
+    web_actual: "https://www.pisosencaceres.es/",
+    google_maps: "https://www.google.com/maps/place/NEXUS+INMO/",
+    resenas: 249,
+    valoracion: 4.7,
+    facturacion: "8.000 – 20.000 €/mes",
+    razon_facturacion: "249 reseñas, inmobiliaria con alto volumen de operaciones. Comisiones por venta/alquiler.",
+    scoring: 4,
+    desglose: { diseno:4, movil:4, velocidad:5, seo:4, ux:5, cta:4 },
+    problemas: [
+      "Portal funcional pero con aspecto desactualizado",
+      "Confusión de marca: dominio pisosencaceres.es vs nombre NEXUS INMO",
+      "Sin herramientas modernas como visitas virtuales o cálculo de hipoteca",
+      "Experiencia de usuario mejorable en búsqueda de inmuebles"
+    ],
+    gancho: "Sois una referencia con 249 reseñas, pero vuestra web no lo transmite. El dominio no coincide con vuestra marca y falta modernización. Os ayudamos a unificar y potenciar vuestra presencia online.",
+    prioridad: "media"
+  },
+  {
+    id: "gestoria-galfex",
+    nombre: "Gestoria Galfex",
+    sector: "Asesoría / Gestoría",
+    direccion: "Av. Antonio Hurtado, 2, 1º, Cáceres",
+    telefono: "927 62 64 10",
+    email: "informacion@galfex.com",
+    web_actual: "https://gestoriagalfex.es/",
+    google_maps: "https://www.google.com/maps/place/Gestoria+Galfex/",
+    resenas: 8,
+    valoracion: 4.0,
+    facturacion: "3.000 – 6.000 €/mes",
+    razon_facturacion: "8 reseñas, gestoría con cartera de clientes (cuotas mensuales). Estimación conservadora.",
+    scoring: 4,
+    desglose: { diseno:4, movil:4, velocidad:5, seo:4, ux:4, cta:4 },
+    problemas: [
+      "WordPress básico con diseño funcional pero desactualizado",
+      "Contenido mejorable para posicionar en búsquedas locales",
+      "Sin blog ni recursos útiles para autónomos (gancho para captar leads)"
+    ],
+    gancho: "Vuestra web necesita actualizarse para competir mejor. Como gestoría, un blog con contenido fiscal os ayudaría a captar muchos más clientes desde Google.",
+    prioridad: "media"
+  },
+  {
+    id: "gabinete-asesor-cacereno",
+    nombre: "Gabinete Asesor Cacereño",
+    sector: "Asesoría / Gestoría",
+    direccion: "Calle Gómez Becerra, 4, 1º A y B, 10001 Cáceres",
+    telefono: "927 22 11 45",
+    email: null,
+    web_actual: "https://gabineteac.es/",
+    google_maps: "https://www.google.com/maps/place/Gabinete+Asesor+Cacere%C3%B1o/",
+    resenas: 16,
+    valoracion: 4.0,
+    facturacion: "4.000 – 8.000 €/mes",
+    razon_facturacion: "16 reseñas, 4.0★. Más de 20 años de experiencia. Cartera de clientes estable.",
+    scoring: 5,
+    desglose: { diseno:5, movil:5, velocidad:4, seo:6, ux:6, cta:5 },
+    problemas: [
+      "Diseño funcional pero desactualizado (WordPress sin personalizar)",
+      "CTAs poco visibles y sin urgencia comercial",
+      "Masa de contenido densa sin jerarquía visual clara"
+    ],
+    gancho: "Vuestra web tiene contenido sólido pero el diseño lastra vuestra imagen. Con 20 años de experiencia, un rediseño os ayudaría a proyectar profesionalidad y captar más clientes.",
+    prioridad: "baja"
+  },
+  {
+    id: "doblea-asesores",
+    nombre: "Doble A Asesores",
+    sector: "Asesoría",
+    direccion: "Avda. Hernán Cortés, 42 1ºC, Cáceres 10004",
+    telefono: "927 21 14 26",
+    email: "info@dobleaasesores.es",
+    web_actual: "https://www.dobleaasesores.es/",
+    google_maps: "https://www.google.com/maps/place/DOBLE+A+ASESORES/",
+    resenas: 55,
+    valoracion: 4.8,
+    facturacion: "5.000 – 10.000 €/mes",
+    razon_facturacion: "55 reseñas, 4.8★. Más de 200 clientes según su web. Cuotas mensuales recurrentes.",
+    scoring: 5,
+    desglose: { diseno:5, movil:5, velocidad:5, seo:5, ux:5, cta:3 },
+    problemas: [
+      "Diseño WordPress básico sin diferenciación de marca",
+      "CTAs débiles — no hay llamados a la acción efectivos para captar leads",
+      "Sin formulario de captación de clientes visible en homepage"
+    ],
+    gancho: "Gestionáis más de 200 clientes pero vuestra web no tiene CTAs para captar nuevos. Un rediseño con embudo de conversión os ayudaría a seguir creciendo.",
+    prioridad: "baja"
+  }
+];
+
+function scoreColor(v) { if (v <= 2) return 'score-lo'; if (v <= 3) return 'score-mid'; return 'score-hi'; }
+function starsHtml(n) { if (n === 5.0) return '★★★★★'; if (n >= 4.5) return '★★★★☆'; if (n >= 4.0) return '★★★★☆'; return '★★★☆☆'; }
+
+function renderCard(l) {
+  const phoneLink = l.telefono ? `<a href="tel:+34${l.telefono.replace(/\s/g,'')}">📞 ${l.telefono}</a>` : '—';
+  const emailLink = l.email ? `<a href="mailto:${l.email}">✉️ ${l.email}</a>` : '—';
+  const webUrl = `https://edgardome.github.io/nexumlabswebs/${l.id}/`;
+
+  const scoreItems = ['diseno','movil','velocidad','seo','ux','cta'].map(k => {
+    const v = l.desglose[k];
+    return `<div class="score-item"><span class="score-label">${k}</span><span class="score-val ${scoreColor(v)}">${v}</span></div>`;
+  }).join('');
+
+  const problemsHtml = l.problemas.map(p => `<li>${p}</li>`).join('');
+
+  return `
+  <div class="card" data-sector="${l.sector}" data-priority="${l.prioridad}" data-search="${l.nombre.toLowerCase()} ${l.sector.toLowerCase()} ${l.direccion.toLowerCase()}">
+    <div class="card-header" onclick="this.parentElement.classList.toggle('open')">
+      <div class="card-header-left">
+        <div class="card-sector">${l.sector}</div>
+        <div class="card-name">${l.nombre}</div>
+        <div class="card-meta">
+          <span class="stars-display">${starsHtml(l.valoracion)}</span>
+          <span>${l.valoracion} · ${l.resenas} reseñas</span>
+          <span class="score-badge score-${l.scoring}">Scoring ${l.scoring}/10</span>
+          <span class="priority-tag p-${l.prioridad}">${l.prioridad}</span>
+        </div>
+      </div>
+      <div class="card-header-right">
+        <a href="${webUrl}" class="link-btn accent" onclick="event.stopPropagation()" target="_blank">🌐 Ver web</a>
+        <span class="expand-icon">▼</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="contact-row">
+        <span class="contact-item">📍 ${l.direccion}</span>
+        <span class="contact-item">${phoneLink}</span>
+        <span class="contact-item">${emailLink}</span>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-block">
+          <h4>📊 Scoring Original (sobre 10)</h4>
+          <div class="score-row">${scoreItems}</div>
+          <div style="margin-top:0.5rem;font-size:0.78rem;color:var(--text3);">Total: <b style="color:var(--text)">${l.scoring}/10</b></div>
+        </div>
+        <div class="info-block">
+          <h4>💰 Facturación Estimada</h4>
+          <div style="font-size:1.1rem;font-weight:700;color:var(--text);">${l.facturacion}</div>
+          <div class="facturacion">${l.razon_facturacion}</div>
+        </div>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-block">
+          <h4>⚠️ Problemas Detectados (web antigua)</h4>
+          <ul class="problem-list">${problemsHtml}</ul>
+        </div>
+        <div class="info-block">
+          <h4>🎯 Gancho para Email de Venta</h4>
+          <div class="gancho-block">${l.gancho}</div>
+        </div>
+      </div>
+
+      <div class="link-group">
+        <a href="${webUrl}" class="link-btn accent" target="_blank">🌐 Web generada</a>
+        <a href="${l.web_actual}" class="link-btn" target="_blank" rel="noopener">🔗 Web actual (original)</a>
+        <a href="${l.google_maps}" class="link-btn" target="_blank" rel="noopener">📍 Google Maps</a>
+      </div>
+    </div>
+  </div>`;
+}
+
+function renderAll(filterSector, searchTerm) {
+  const grid = document.getElementById('cardsGrid');
+  let filtered = leads;
+
+  if (filterSector && filterSector !== 'all') {
+    if (filterSector === 'Taller') filtered = leads.filter(l => l.sector.includes('Taller'));
+    else if (filterSector === 'Inmobiliaria') filtered = leads.filter(l => l.sector.includes('Inmobiliaria'));
+    else filtered = leads.filter(l => l.sector.includes(filterSector));
+  }
+
+  if (searchTerm) {
+    const s = searchTerm.toLowerCase();
+    filtered = leads.filter(l =>
+      l.nombre.toLowerCase().includes(s) ||
+      l.sector.toLowerCase().includes(s) ||
+      l.direccion.toLowerCase().includes(s) ||
+      l.telefono.includes(s)
+    );
+  }
+
+  grid.innerHTML = filtered.map(renderCard).join('');
+}
+
+function filterCards(sector) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  document.querySelector('.search-input').value = '';
+  renderAll(sector, '');
+}
+
+function searchCards(term) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  if (!term) document.querySelector('.filter-btn').classList.add('active');
+  renderAll(term ? null : 'all', term);
+}
+
+// Init
+renderAll('all', '');
+
+// Open first card by default
+setTimeout(() => {
+  const first = document.querySelector('.card');
+  if (first) first.classList.add('open');
+}, 300);
+</script>
 
 </body>
 </html>
