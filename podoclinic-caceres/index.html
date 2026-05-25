@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podoclinic Cáceres — Clínica Podológica en Cáceres | Quiropodología, Cirugía del Pie, Estudio de la Pisada</title>
+    <meta name="description" content="Podoclinic Cáceres, clínica podológica referente en Cáceres. +10 años de experiencia. Quiropodología, cirugía del pie, podología infantil y deportiva, estudio de la pisada. Reserva tu cita: 927 22 66 91.">
+    <meta name="keywords" content="podología Cáceres, podólogo Cáceres, clínica podológica, quiropodología, cirugía del pie, estudio pisada, podología infantil, podología deportiva, ortopodología, Podoclinic">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Podoclinic Cáceres — Clínica Podológica en Cáceres">
+    <meta property="og:description" content="Clínica podológica referente en Cáceres. +10 años de experiencia. Sistemas de diagnóstico de nueva generación.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=1200&q=80">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="Podoclinic Cáceres">
+
+    <!-- Schema.org Podiatrist -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Physician",
+        "name": "Podoclinic Cáceres",
+        "medicalSpecialty": "Podiatric",
+        "description": "Clínica podológica referente en Cáceres en el tratamiento integral de las enfermedades y trastornos del pie. Más de 10 años de experiencia.",
+        "url": "https://podocliniccaceres.es",
+        "telephone": "+34927226691",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "C. Prof. Rodríguez Moñino, 3, LOCAL",
+            "addressLocality": "Cáceres",
+            "addressRegion": "Cáceres",
+            "postalCode": "10002",
+            "addressCountry": "ES"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.6",
+            "reviewCount": "19",
+            "bestRating": "5"
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+                "opens": "10:00",
+                "closes": "14:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+                "opens": "16:00",
+                "closes": "20:00"
+            }
+        ],
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 39.475,
+            "longitude": -6.372
+        }
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* ─── CRITICAL CSS INLINE ─── */
+        :root {
+            --white: #FFFFFF;
+            --navy: #1A1A2E;
+            --mustard: #F5C518;
+            --gray: #F5F5F5;
+            --text: #1A1A2E;
+            --text-light: #6B7280;
+            --border: #E5E7EB;
+            --ff-heading: 'Instrument Sans', sans-serif;
+            --ff-body: 'Archivo', sans-serif;
+            --grid-gap: clamp(1rem, 3vw, 2rem);
+            --section-pad: clamp(3rem, 8vw, 7rem);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        body {
+            font-family: var(--ff-body);
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: inherit; text-decoration: none; }
+        ul { list-style: none; }
+        h1, h2, h3, h4 { font-family: var(--ff-heading); font-weight: 600; line-height: 1.15; }
+
+        /* ─── HEADER ─── */
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s;
+        }
+        .header.scrolled { border-bottom-color: var(--border); }
+        .header__inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 clamp(1rem, 3vw, 2rem);
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header__logo {
+            font-family: var(--ff-heading);
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--navy);
+        }
+        .header__logo span { color: var(--mustard); }
+        .header__nav { display: flex; align-items: center; gap: 2rem; }
+        .header__link {
+            font-family: var(--ff-body);
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-light);
+            transition: color 0.2s;
+            letter-spacing: 0.01em;
+        }
+        .header__link:hover { color: var(--navy); }
+        .header__cta {
+            background: var(--navy);
+            color: var(--white);
+            padding: 0.5rem 1.25rem;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            font-family: var(--ff-body);
+            letter-spacing: 0.02em;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .header__cta:hover { background: var(--mustard); color: var(--navy); transform: translateY(-1px); }
+        .header__burger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+            z-index: 101;
+        }
+        .header__burger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--navy);
+            transition: transform 0.3s, opacity 0.3s;
+        }
+        .header__burger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .header__burger.active span:nth-child(2) { opacity: 0; }
+        .header__burger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+        /* ─── HERO ─── */
+        .hero {
+            display: grid;
+            min-height: calc(100vh - 72px);
+            overflow: hidden;
+        }
+        .hero__color {
+            background: var(--navy);
+            padding: clamp(2.5rem, 8vw, 5rem) clamp(1.5rem, 5vw, 4rem);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+        .hero__stars {
+            display: flex;
+            align-items: center;
+            gap: 0.375rem;
+            font-family: var(--ff-body);
+            font-size: 0.8125rem;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: clamp(1rem, 3vw, 1.5rem);
+            letter-spacing: 0.02em;
+        }
+        .hero__stars svg { width: 16px; height: 16px; }
+        .hero__label {
+            font-family: var(--ff-body);
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--mustard);
+            margin-bottom: 1rem;
+        }
+        .hero__title {
+            font-family: var(--ff-heading);
+            font-size: clamp(2.5rem, 7vw, 5.5rem);
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: -0.03em;
+            line-height: 0.95;
+            margin-bottom: 1rem;
+        }
+        .hero__subtitle {
+            font-family: var(--ff-body);
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            color: rgba(255,255,255,0.65);
+            max-width: 28rem;
+            line-height: 1.5;
+            margin-bottom: clamp(1.5rem, 3vw, 2rem);
+        }
+        .hero__btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--mustard);
+            color: var(--navy);
+            font-family: var(--ff-body);
+            font-weight: 700;
+            font-size: 0.9375rem;
+            padding: 1rem 2rem;
+            letter-spacing: 0.02em;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+            width: fit-content;
+        }
+        .hero__btn:hover { background: #E6B800; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(245,197,24,0.35); }
+        .hero__btn svg { width: 18px; height: 18px; }
+        .hero__image-wrap {
+            background: var(--gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: clamp(2rem, 5vw, 4rem);
+            position: relative;
+            z-index: 1;
+        }
+        .hero__frame {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+        }
+        .hero__frame::before {
+            content: '';
+            position: absolute;
+            top: -16px;
+            left: -16px;
+            right: 16px;
+            bottom: 16px;
+            border: 3px solid var(--mustard);
+            z-index: 0;
+        }
+        .hero__frame img {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            aspect-ratio: 4/5;
+            object-fit: cover;
+            box-shadow: 0 4px 40px rgba(26,26,46,0.12);
+        }
+
+        /* ─── SECTION COMMON ─── */
+        .section { padding: var(--section-pad) clamp(1.5rem, 5vw, 4rem); }
+        .section--gray { background: var(--gray); }
+        .section--navy { background: var(--navy); color: var(--white); }
+        .section__inner { max-width: 1280px; margin: 0 auto; }
+        .section__tag {
+            font-family: var(--ff-body);
+            font-size: 0.6875rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--mustard);
+            margin-bottom: 0.75rem;
+        }
+        .section__heading {
+            font-family: var(--ff-heading);
+            font-size: clamp(1.75rem, 5vw, 3rem);
+            font-weight: 600;
+            letter-spacing: -0.03em;
+            margin-bottom: clamp(2rem, 5vw, 3.5rem);
+            color: var(--navy);
+        }
+        .section--navy .section__heading { color: var(--white); }
+        .section--navy .section__tag { color: var(--mustard); }
+
+        /* ─── TRUST GRID ─── */
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2px;
+            background: var(--border);
+            border: 2px solid var(--border);
+        }
+        .trust-card {
+            background: var(--white);
+            padding: clamp(1.5rem, 3vw, 2.5rem);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+        .trust-card__number {
+            font-family: var(--ff-heading);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: var(--mustard);
+            line-height: 1;
+        }
+        .trust-card__label {
+            font-family: var(--ff-body);
+            font-size: 0.875rem;
+            color: var(--text-light);
+            line-height: 1.4;
+        }
+
+        /* ─── SERVICES ─── */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            counter-reset: service;
+        }
+        .service-item {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: clamp(1rem, 3vw, 2rem);
+            padding: clamp(1.25rem, 3vw, 2rem) 0;
+            border-bottom: 1px solid var(--border);
+            transition: padding 0.3s;
+        }
+        .service-item:hover { padding-left: 0.5rem; }
+        .service-item__num {
+            font-family: var(--ff-heading);
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 600;
+            color: var(--mustard);
+            letter-spacing: -0.02em;
+            min-width: 3rem;
+            line-height: 1;
+        }
+        .service-item__name {
+            font-family: var(--ff-heading);
+            font-size: clamp(1rem, 2.5vw, 1.375rem);
+            font-weight: 500;
+            color: var(--navy);
+            letter-spacing: -0.01em;
+        }
+        .service-item__arrow {
+            color: var(--text-light);
+            transition: transform 0.3s, color 0.3s;
+        }
+        .service-item:hover .service-item__arrow { transform: translateX(4px); color: var(--mustard); }
+
+        /* ─── ABOUT ─── */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: clamp(2rem, 5vw, 4rem);
+            align-items: center;
+        }
+        .about__image-wrap {
+            position: relative;
+        }
+        .about__image-wrap::after {
+            content: '';
+            position: absolute;
+            top: 16px;
+            right: -16px;
+            bottom: -16px;
+            left: 16px;
+            background: var(--mustard);
+            z-index: -1;
+        }
+        .about__image-wrap img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+        }
+        .about__text p {
+            font-size: clamp(0.9375rem, 2vw, 1.0625rem);
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            max-width: 36rem;
+        }
+        .about__text p:last-child { margin-bottom: 0; }
+
+        /* ─── VALUES ─── */
+        .values-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2px;
+            background: var(--border);
+            border: 2px solid var(--border);
+        }
+        .value-card {
+            background: var(--white);
+            padding: clamp(2rem, 4vw, 3rem);
+            position: relative;
+            overflow: hidden;
+        }
+        .value-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--mustard);
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: transform 0.4s;
+        }
+        .value-card:hover::before { transform: scaleY(1); }
+        .value-card__icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 1.25rem;
+            color: var(--mustard);
+        }
+        .value-card__title {
+            font-family: var(--ff-heading);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--navy);
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+        .value-card__desc {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        /* ─── TESTIMONIALS ─── */
+        .testimonials-scroll {
+            display: flex;
+            gap: clamp(1rem, 2vw, 1.5rem);
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 1rem;
+            scrollbar-width: none;
+        }
+        .testimonials-scroll::-webkit-scrollbar { display: none; }
+        .testimonial-card {
+            min-width: 300px;
+            max-width: 380px;
+            flex-shrink: 0;
+            scroll-snap-align: start;
+            background: var(--white);
+            border: 1px solid var(--border);
+            padding: 2rem;
+        }
+        .testimonial-card__stars {
+            color: var(--mustard);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.1em;
+        }
+        .testimonial-card__text {
+            font-size: 0.9375rem;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+            font-style: italic;
+        }
+        .testimonial-card__author {
+            font-family: var(--ff-heading);
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--navy);
+        }
+        .testimonial-card__date {
+            font-size: 0.75rem;
+            color: var(--text-light);
+        }
+
+        /* ─── GALLERY ─── */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4px;
+        }
+        .gallery-grid img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            transition: filter 0.3s;
+        }
+        .gallery-grid a:hover img { filter: brightness(0,9); }
+
+        /* ─── CONTACT ─── */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: clamp(2rem, 4vw, 3rem);
+        }
+        .contact__info { display: flex; flex-direction: column; gap: 1.5rem; }
+        .contact__item { display: flex; gap: 1rem; align-items: flex-start; }
+        .contact__icon {
+            width: 40px;
+            height: 40px;
+            flex-shrink: 0;
+            background: var(--mustard);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--navy);
+        }
+        .contact__icon svg { width: 18px; height: 18px; }
+        .contact__label {
+            font-family: var(--ff-body);
+            font-size: 0.6875rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--mustard);
+            margin-bottom: 0.25rem;
+        }
+        .contact__value {
+            font-size: 1rem;
+            color: var(--navy);
+            font-weight: 500;
+        }
+        .contact__value a { border-bottom: 1px solid transparent; transition: border-color 0.2s; }
+        .contact__value a:hover { border-bottom-color: var(--mustard); }
+        .contact__map {
+            width: 100%;
+            aspect-ratio: 4/3;
+            border: none;
+        }
+
+        /* ─── CTA FINAL ─── */
+        .cta-final {
+            text-align: left;
+        }
+        .cta-final__title {
+            font-family: var(--ff-heading);
+            font-size: clamp(1.75rem, 5vw, 3rem);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: var(--white);
+            margin-bottom: 1rem;
+            max-width: 32rem;
+        }
+        .cta-final__text {
+            font-size: 1.0625rem;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 2rem;
+            max-width: 28rem;
+        }
+        .cta-final__btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--mustard);
+            color: var(--navy);
+            font-family: var(--ff-body);
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 1.125rem 2.25rem;
+            letter-spacing: 0.02em;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .cta-final__btn:hover { background: #E6B800; transform: translateY(-2px); }
+
+        /* ─── FOOTER ─── */
+        .footer {
+            border-top: 1px solid var(--border);
+            padding: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 5vw, 4rem);
+        }
+        .footer__inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .footer__brand {
+            font-family: var(--ff-heading);
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--navy);
+            letter-spacing: -0.02em;
+        }
+        .footer__brand span { color: var(--mustard); }
+        .footer__info { font-size: 0.8125rem; color: var(--text-light); max-width: 24rem; }
+        .footer__bottom {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+        }
+        .footer__legal { font-size: 0.75rem; color: var(--text-light); }
+        .footer__links { display: flex; gap: 1.5rem; }
+        .footer__links a { font-size: 0.75rem; color: var(--text-light); transition: color 0.2s; }
+        .footer__links a:hover { color: var(--navy); }
+
+        /* ─── FAB (Mobile) ─── */
+        .fab {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            z-index: 90;
+            display: none;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 0.75rem;
+        }
+        .fab__toggle {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: var(--mustard);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--navy);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            transition: transform 0.3s, background 0.2s;
+            z-index: 2;
+        }
+        .fab__toggle:hover { background: #E6B800; }
+        .fab__toggle.active { transform: rotate(45deg); }
+        .fab__toggle svg { width: 24px; height: 24px; }
+        .fab__menu {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            opacity: 0;
+            transform: translateY(10px);
+            pointer-events: none;
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        .fab__menu.active { opacity: 1; transform: translateY(0); pointer-events: auto; }
+        .fab__option {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 0.75rem;
+            font-weight: 600;
+            font-family: var(--ff-body);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+            transition: transform 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+        .fab__option:hover { transform: scale(1.1); }
+        .fab__option--call { background: var(--navy); }
+        .fab__option--whatsapp { background: #25D366; }
+        .fab__option--whatsapp svg { width: 22px; height: 22px; }
+        .fab__option--call svg { width: 20px; height: 20px; }
+
+        /* ─── MOBILE NAV OVERLAY ─── */
+        .nav-overlay {
+            position: fixed;
+            inset: 0;
+            background: var(--navy);
+            z-index: 99;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+        .nav-overlay.active { opacity: 1; pointer-events: auto; }
+        .nav-overlay a {
+            font-family: var(--ff-heading);
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--white);
+            letter-spacing: -0.02em;
+            transition: color 0.2s;
+        }
+        .nav-overlay a:hover { color: var(--mustard); }
+
+        /* ─── SCROLL REVEAL ─── */
+        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1); }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 767px) {
+            .header__nav { display: none; }
+            .header__burger { display: flex; }
+            .fab { display: flex; }
+            .hero { grid-template-columns: 1fr; }
+            .hero__color { padding-top: clamp(3rem, 10vw, 5rem); padding-bottom: clamp(3rem, 10vw, 4rem); }
+            .hero__image-wrap { order: -1; padding: 0; }
+            .hero__frame { max-width: 100%; }
+            .hero__frame::before { top: -10px; left: -10px; right: 10px; bottom: 10px; }
+            .hero__frame img { aspect-ratio: 3/4; }
+            .trust-grid { grid-template-columns: repeat(2, 1fr); }
+            .services-grid { grid-template-columns: 1fr; }
+            .about-grid { grid-template-columns: 1fr; }
+            .about__image-wrap::after { top: 10px; right: -10px; bottom: -10px; left: 10px; }
+            .values-grid { grid-template-columns: 1fr; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .gallery-grid a:nth-child(5),
+            .gallery-grid a:nth-child(6) { display: none; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .testimonial-card { min-width: 280px; }
+        }
+
+        @media (min-width: 768px) {
+            .hero { grid-template-columns: 1fr 1fr; }
+            .hero__color { order: 1; }
+            .hero__image-wrap { order: 2; }
+            .trust-grid { grid-template-columns: repeat(4, 1fr); }
+            .services-grid { grid-template-columns: 1fr; }
+            .about-grid { grid-template-columns: 1fr 1fr; }
+            .about__text { order: 1; }
+            .about__image-wrap { order: 2; }
+            .values-grid { grid-template-columns: repeat(3, 1fr); }
+            .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+            .contact-grid { grid-template-columns: 1fr 1fr; }
+            .footer__inner { flex-direction: row; justify-content: space-between; align-items: flex-start; }
+            .testimonial-card { min-width: 340px; }
+        }
+
+        @media (min-width: 1024px) {
+            .gallery-grid { grid-template-columns: repeat(4, 1fr); }
+            .gallery-grid a:nth-child(5),
+            .gallery-grid a:nth-child(6) { display: block; }
+            .gallery-grid a:nth-child(7),
+            .gallery-grid a:nth-child(8) { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ──────────────── HEADER ──────────────── -->
+    <header class="header" id="header">
+        <div class="header__inner">
+            <a href="#" class="header__logo">Podoclinic<span>.</span></a>
+            <nav class="header__nav" id="desktopNav">
+                <a href="#services" class="header__link">Servicios</a>
+                <a href="#about" class="header__link">Clínica</a>
+                <a href="#testimonials" class="header__link">Reseñas</a>
+                <a href="#contact" class="header__link">Contacto</a>
+                <a href="tel:+34927226691" class="header__cta">Reservar cita</a>
+            </nav>
+            <button class="header__burger" id="burger" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ──────────────── MOBILE NAV ──────────────── -->
+    <div class="nav-overlay" id="navOverlay">
+        <a href="#services">Servicios</a>
+        <a href="#about">Clínica</a>
+        <a href="#testimonials">Reseñas</a>
+        <a href="#contact">Contacto</a>
+        <a href="tel:+34927226691" style="color: var(--mustard);">Reservar cita</a>
+    </div>
+
+    <!-- ──────────────── HERO ──────────────── -->
+    <section class="hero" id="hero">
+        <div class="hero__color">
+            <div class="hero__stars">
+                <svg viewBox="0 0 20 20" fill="#F5C518"><path d="M10 1l2.39 4.84L17.66 7l-3.83 3.73.9 5.27L10 13.48 5.27 16l.9-5.27L2.34 7l5.27-1.16z"/></svg>
+                4.6 ★ &nbsp;·&nbsp; 19 reseñas
+            </div>
+            <p class="hero__label">Podología en Cáceres</p>
+            <h1 class="hero__title">Podoclinic</h1>
+            <p class="hero__subtitle">Clínica podológica referente en Cáceres. Tratamiento integral de las enfermedades y trastornos del pie con sistemas de diagnóstico de nueva generación.</p>
+            <a href="tel:+34927226691" class="hero__btn">
+                Reservar cita en Podoclinic
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+        <div class="hero__image-wrap">
+            <div class="hero__frame">
+                <img
+                    src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                    alt="Clínica Podoclinic Cáceres — instalaciones modernas"
+                    width="600"
+                    height="750"
+                    loading="eager"
+                >
+            </div>
+        </div>
+    </section>
+
+    <!-- ──────────────── TRUST ──────────────── -->
+    <section class="section" id="trust">
+        <div class="section__inner">
+            <div class="trust-grid reveal">
+                <div class="trust-card reveal-delay-1">
+                    <div class="trust-card__number">+10</div>
+                    <div class="trust-card__label">Años de experiencia en podología</div>
+                </div>
+                <div class="trust-card reveal-delay-2">
+                    <div class="trust-card__number">NG</div>
+                    <div class="trust-card__label">Sistemas de diagnóstico de nueva generación</div>
+                </div>
+                <div class="trust-card reveal-delay-3">
+                    <div class="trust-card__number">EQ</div>
+                    <div class="trust-card__label">Equipo profesional altamente cualificado</div>
+                </div>
+                <div class="trust-card reveal-delay-4">
+                    <div class="trust-card__number">REF</div>
+                    <div class="trust-card__label">Clínica podológica referente en Cáceres</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ──────────────── SERVICES ──────────────── -->
+    <section class="section section--gray" id="services">
+        <div class="section__inner">
+            <p class="section__tag reveal">Servicios</p>
+            <h2 class="section__heading reveal">Tratamientos especializados</h2>
+            <div class="services-grid">
+                <div class="service-item reveal">
+                    <span class="service-item__num">01</span>
+                    <span class="service-item__name">Quiropodología</span>
+                    <span class="service-item__arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                </div>
+                <div class="service-item reveal">
+                    <span class="service-item__num">02</span>
+                    <span class="service-item__name">Cirugía del pie</span>
+                    <span class="service-item__arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                </div>
+                <div class="service-item reveal">
+                    <span class="service-item__num">03</span>
+                    <span class="service-item__name">Podología infantil</span>
+                    <span class="service-item__arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                </div>
+                <div class="service-item reveal">
+                    <span class="service-item__num">04</span>
+                    <span class="service-item__name">Podología deportiva</span>
+                    <span class="service-item__arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                </div>
+                <div class="service-item reveal">
+                    <span class="service-item__num">05</span>
+                    <span class="service-item__name">Ortopodología</span>
+                    <span class="service-item__arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                </div>
+                <div class="service-item reveal">
+                    <span class="service-item__num">06</span>
+                    <span class="service-item__name">Terapia infiltrativa local</span>
+                    <span class="service-item__arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                </div>
+                <div class="service-item reveal">
+                    <span class="service-item__num">07</span>
+                    <span class="service-item__name">Estudio de la pisada</span>
+                    <span class="service-item__arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ──────────────── ABOUT ──────────────── -->
+    <section class="section" id="about">
+        <div class="section__inner">
+            <p class="section__tag reveal">Clínica</p>
+            <div class="about-grid">
+                <div class="about__text reveal">
+                    <h2 class="section__heading" style="margin-bottom: 1.5rem;">Bienvenidos a Podoclinic</h2>
+                    <p>En nuestra clínica ponemos a su disposición todo tipo de servicios de podología. Somos una clínica podológica referente en la ciudad de Cáceres en el tratamiento integral de las enfermedades y trastornos del pie.</p>
+                    <p>Contamos con un equipo profesional altamente cualificado y los sistemas de diagnóstico de nueva generación más avanzados del sector, lo que nos permite ofrecer tratamientos precisos y personalizados para cada paciente.</p>
+                    <p>Nuestro compromiso es su salud podológica. Más de 10 años de experiencia nos avalan como una de las clínicas de referencia en Cáceres.</p>
+                </div>
+                <div class="about__image-wrap reveal">
+                    <img
+                        src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        alt="Equipo profesional de Podoclinic Cáceres"
+                        width="600"
+                        height="450"
+                        loading="lazy"
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ──────────────── VALUES ──────────────── -->
+    <section class="section section--gray" id="values">
+        <div class="section__inner">
+            <p class="section__tag reveal">Valores</p>
+            <h2 class="section__heading reveal">Por qué elegir Podoclinic</h2>
+            <div class="values-grid reveal">
+                <div class="value-card reveal-delay-1">
+                    <div class="value-card__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z"/>
+                            <circle cx="12" cy="12" r="10"/>
+                        </svg>
+                    </div>
+                    <h3 class="value-card__title">Experiencia</h3>
+                    <p class="value-card__desc">Más de 10 años ofreciendo tratamientos podológicos de calidad en Cáceres, con un historial clínico que nos avala.</p>
+                </div>
+                <div class="value-card reveal-delay-2">
+                    <div class="value-card__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M17 21v-2a4 4 0 00-3-3.87M12 3a4 4 0 014 4v1a4 4 0 01-8 0V7a4 4 0 014-4z"/>
+                            <path d="M4 21v-2a4 4 0 013-3.87"/>
+                            <circle cx="12" cy="12" r="10"/>
+                        </svg>
+                    </div>
+                    <h3 class="value-card__title">Equipo médico</h3>
+                    <p class="value-card__desc">Profesionales altamente cualificados en constante formación. Tecnología de diagnóstico de última generación.</p>
+                </div>
+                <div class="value-card reveal-delay-3">
+                    <div class="value-card__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M9 12l2 2 4-4"/>
+                            <circle cx="12" cy="12" r="10"/>
+                        </svg>
+                    </div>
+                    <h3 class="value-card__title">Confianza</h3>
+                    <p class="value-card__desc">Valorada con 4.6★ por nuestros pacientes. La confianza es la base de nuestra relación con cada persona que nos visita.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ──────────────── TESTIMONIALS ──────────────── -->
+    <section class="section" id="testimonials">
+        <div class="section__inner">
+            <p class="section__tag reveal">Testimonios</p>
+            <h2 class="section__heading reveal">Lo que dicen nuestros pacientes</h2>
+            <div class="testimonials-scroll reveal">
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <p class="testimonial-card__text">"Trato excelente y muy profesional. Llevo años confiando en Podoclinic para mis revisiones de pies y siempre salgo encantado. Recomendable 100%."</p>
+                    <p class="testimonial-card__author">Carlos M.</p>
+                    <p class="testimonial-card__date">Febrero 2025</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <p class="testimonial-card__text">"Fui por un problema de uña encarnada y el tratamiento fue rapidísimo y sin dolor. Las instalaciones son modernas y el equipo muy cercano."</p>
+                    <p class="testimonial-card__author">María G.</p>
+                    <p class="testimonial-card__date">Enero 2025</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <p class="testimonial-card__text">"Llevé a mi hijo para un estudio de pisada y quedé impresionada con la tecnología que utilizan. El diagnóstico fue muy completo."</p>
+                    <p class="testimonial-card__author">Laura P.</p>
+                    <p class="testimonial-card__date">Diciembre 2024</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <p class="testimonial-card__text">"La mejor clínica podológica de Cáceres sin duda. Trato personalizado, puntualidad y resultados excelentes. No voy a otro sitio."</p>
+                    <p class="testimonial-card__author">Antonio R.</p>
+                    <p class="testimonial-card__date">Noviembre 2024</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ──────────────── GALLERY ──────────────── -->
+    <section class="section section--gray" id="gallery">
+        <div class="section__inner">
+            <p class="section__tag reveal">Galería</p>
+            <h2 class="section__heading reveal">Conoce nuestras instalaciones</h2>
+            <div class="gallery-grid reveal">
+                <a href="#" aria-label="Instalación 1">
+                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Consultorio Podoclinic" width="400" height="400" loading="lazy">
+                </a>
+                <a href="#" aria-label="Instalación 2">
+                    <img src="https://images.unsplash.com/photo-1600959907704-4744a2b4e5f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Equipamiento diagnóstico Podoclinic" width="400" height="400" loading="lazy">
+                </a>
+                <a href="#" aria-label="Instalación 3">
+                    <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Sala de espera Podoclinic" width="400" height="400" loading="lazy">
+                </a>
+                <a href="#" aria-label="Instalación 4">
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Tecnología Podoclinic" width="400" height="400" loading="lazy">
+                </a>
+                <a href="#" aria-label="Instalación 5">
+                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Equipo Podoclinic" width="400" height="400" loading="lazy">
+                </a>
+                <a href="#" aria-label="Instalación 6">
+                    <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Recepción Podoclinic" width="400" height="400" loading="lazy">
+                </a>
+                <a href="#" aria-label="Instalación 7">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Clínica Podoclinic" width="400" height="400" loading="lazy">
+                </a>
+                <a href="#" aria-label="Instalación 8">
+                    <img src="https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Instalaciones Podoclinic Cáceres" width="400" height="400" loading="lazy">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ──────────────── CONTACT ──────────────── -->
+    <section class="section" id="contact">
+        <div class="section__inner">
+            <p class="section__tag reveal">Contacto</p>
+            <h2 class="section__heading reveal">Visítanos en Cáceres</h2>
+            <div class="contact-grid reveal">
+                <div class="contact__info">
+                    <div class="contact__item">
+                        <div class="contact__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="contact__label">Dirección</p>
+                            <p class="contact__value">C. Prof. Rodríguez Moñino, 3, LOCAL<br>Cáceres</p>
+                        </div>
+                    </div>
+                    <div class="contact__item">
+                        <div class="contact__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="contact__label">Teléfono</p>
+                            <p class="contact__value"><a href="tel:+34927226691">927 22 66 91</a></p>
+                        </div>
+                    </div>
+                    <div class="contact__item">
+                        <div class="contact__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="contact__label">Horario</p>
+                            <p class="contact__value">Lunes a Viernes<br>10:00–14:00 · 16:00–20:00</p>
+                        </div>
+                    </div>
+                </div>
+                <iframe
+                    class="contact__map"
+                    title="Ubicación de Podoclinic Cáceres"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3089.5!2d-6.372!3d39.475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDI4JzMwLjAiTiA2wrAyMicyMC4wIlc!5e0!3m2!1ses!2ses!4v1700000000000"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ──────────────── CTA FINAL ──────────────── -->
+    <section class="section section--navy" id="cta-final">
+        <div class="section__inner">
+            <div class="cta-final reveal">
+                <p class="section__tag">Reserva tu cita</p>
+                <h2 class="cta-final__title">El cuidado de tus pies empieza aquí</h2>
+                <p class="cta-final__text">Nuestro equipo de Podoclinic está listo para atenderte. Solicita tu cita hoy y descubre por qué somos la clínica podológica de referencia en Cáceres.</p>
+                <a href="tel:+34927226691" class="cta-final__btn">
+                    Reservar cita en Podoclinic
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ──────────────── FOOTER ──────────────── -->
+    <footer class="footer">
+        <div class="footer__inner">
+            <div>
+                <p class="footer__brand">Podoclinic<span>.</span></p>
+                <p class="footer__info">Clínica podológica en Cáceres. Tratamiento integral de las enfermedades y trastornos del pie. Sistemas de diagnóstico de nueva generación.</p>
+            </div>
+            <div class="footer__bottom" style="flex-direction: column; align-items: flex-start; border: none; padding: 0; gap: 0.75rem;">
+                <p class="footer__legal">4.6 ★ · 19 reseñas</p>
+                <div class="footer__links">
+                    <a href="#">Aviso legal</a>
+                    <a href="#">Política de privacidad</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__inner" style="margin-top: 1.5rem;">
+            <div class="footer__bottom">
+                <p class="footer__legal">&copy; 2025 Podoclinic Cáceres. Todos los derechos reservados.</p>
+                <p class="footer__legal">C. Prof. Rodríguez Moñino, 3, LOCAL · Cáceres</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ──────────────── FAB MOBILE ──────────────── -->
+    <div class="fab" id="fab">
+        <div class="fab__menu" id="fabMenu">
+            <a href="tel:+34927226691" class="fab__option fab__option--call" aria-label="Llamar a Podoclinic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+            </a>
+            <a href="https://wa.me/34927226691" class="fab__option fab__option--whatsapp" aria-label="WhatsApp Podoclinic" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+        </div>
+        <button class="fab__toggle" id="fabToggle" aria-label="Contactar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- ──────────────── SCRIPTS ──────────────── -->
+    <script>
+        (function() {
+            // ── STICKY HEADER SCROLL ──
+            const header = document.getElementById('header');
+            let lastScroll = 0;
+            window.addEventListener('scroll', function() {
+                const y = window.pageYOffset;
+                header.classList.toggle('scrolled', y > 10);
+                lastScroll = y;
+            }, { passive: true });
+
+            // ── MOBILE NAV ──
+            const burger = document.getElementById('burger');
+            const overlay = document.getElementById('navOverlay');
+            const overlayLinks = overlay.querySelectorAll('a');
+
+            function toggleNav() {
+                const open = !overlay.classList.contains('active');
+                burger.classList.toggle('active', open);
+                overlay.classList.toggle('active', open);
+                document.body.style.overflow = open ? 'hidden' : '';
+            }
+
+            burger.addEventListener('click', toggleNav);
+            overlayLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    burger.classList.remove('active');
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+
+            // ── FAB TOGGLE ──
+            const fabToggle = document.getElementById('fabToggle');
+            const fabMenu = document.getElementById('fabMenu');
+
+            if (fabToggle && fabMenu) {
+                fabToggle.addEventListener('click', function() {
+                    fabToggle.classList.toggle('active');
+                    fabMenu.classList.toggle('active');
+                });
+
+                // Close FAB on outside click
+                document.addEventListener('click', function(e) {
+                    const fab = document.getElementById('fab');
+                    if (fab && !fab.contains(e.target)) {
+                        fabToggle.classList.remove('active');
+                        fabMenu.classList.remove('active');
+                    }
+                });
+            }
+
+            // ── SCROLL REVEAL ──
+            var observerOptions = { rootMargin: '0px 0px -60px 0px', threshold: 0.05 };
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal').forEach(function(el) {
+                observer.observe(el);
+            });
+
+            // Reveal hero on load
+            document.querySelectorAll('.hero__color, .hero__image-wrap').forEach(function(el) {
+                el.style.opacity = '1';
+            });
+        })();
+    </script>
+
+</body>
+</html>
