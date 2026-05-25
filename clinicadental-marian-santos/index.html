@@ -49,27 +49,27 @@
 /* ── Critical CSS (above-fold) ── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --c-bg:#0F0F1A;
-  --c-surface:#18182A;
-  --c-surface-light:#1E1E36;
-  --c-surface-lighter:#262644;
+  --c-bg:#FFFFFF;
+  --c-surface:#F0F7FC;
+  --c-surface-light:#E1F0F9;
+  --c-surface-lighter:#D0E7F5;
   --c-white:#FFFFFF;
-  --c-accent-blue:#B8D4E3;
-  --c-accent-gold:#C9A96E;
-  --c-accent-gold-dim:rgba(201,169,110,.18);
-  --c-text:#FFFFFF;
-  --c-text-muted:rgba(255,255,255,.55);
-  --c-text-subtle:rgba(255,255,255,.35);
-  --c-border:rgba(255,255,255,.07);
-  --c-border-gold:rgba(201,169,110,.25);
+  --c-accent:#1F81C8;
+  --c-accent-dim:rgba(31,129,200,.12);
+  --c-accent-hover:#1970B0;
+  --c-text:#1A2332;
+  --c-text-muted:rgba(26,35,50,.6);
+  --c-text-subtle:rgba(26,35,50,.45);
+  --c-border:rgba(31,129,200,.1);
+  --c-border-accent:rgba(31,129,200,.25);
   --ff-heading:'DM Serif Display',Georgia,serif;
   --ff-body:'DM Sans',-apple-system,sans-serif;
   --radius-sm:6px;
   --radius:12px;
   --radius-lg:20px;
   --radius-xl:28px;
-  --shadow-card:0 1px 0 rgba(255,255,255,.04),0 4px 24px rgba(0,0,0,.4);
-  --shadow-gold:0 0 0 1px var(--c-accent-gold-dim),0 8px 40px rgba(201,169,110,.12);
+  --shadow-card:0 1px 4px rgba(0,0,0,.06),0 4px 24px rgba(0,0,0,.08);
+  --shadow-accent:0 0 0 1px var(--c-accent-dim),0 8px 40px rgba(31,129,200,.12);
   --transition:0.35s cubic-bezier(.4,0,.2,1);
   --header-h:72px;
 }
@@ -95,11 +95,16 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
   transition:background .4s,box-shadow .4s;
 }
 .site-header.scrolled{
-  background:rgba(15,15,26,.92);
+  background:rgba(255,255,255,.95);
   backdrop-filter:blur(16px);
   -webkit-backdrop-filter:blur(16px);
-  box-shadow:0 1px 0 var(--c-border);
+  box-shadow:0 1px 4px rgba(0,0,0,.06);
 }
+.site-header.scrolled .logo{color:var(--c-text)}
+.site-header.scrolled .logo-text span{color:var(--c-accent)}
+.site-header.scrolled .nav-links a{color:var(--c-text-muted)}
+.site-header.scrolled .nav-links a:hover{color:var(--c-text)}
+.site-header.scrolled .menu-toggle span{background:var(--c-text)}
 .header-inner{
   display:flex;align-items:center;justify-content:space-between;
   max-width:1280px;margin:0 auto;padding:0 24px;height:100%;
@@ -111,17 +116,10 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
   color:var(--c-white);
   display:flex;align-items:center;gap:10px;
 }
-.logo-mark{
-  width:38px;height:38px;
-  border-radius:var(--radius-sm);
-  background:linear-gradient(135deg,var(--c-accent-gold),#A88B52);
-  display:flex;align-items:center;justify-content:center;
-  font-family:var(--ff-heading);
-  font-size:.85rem;
-  color:var(--c-bg);
-  flex-shrink:0;
+.logo-img{
+  height:44px;width:auto;display:block;flex-shrink:0;
 }
-.logo-text span{color:var(--c-accent-gold)}
+.logo-text span{color:var(--c-accent)}
 .nav-links{display:flex;gap:32px;align-items:center}
 .nav-links a{
   font-size:.88rem;
@@ -133,7 +131,7 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 }
 .nav-links a::after{
   content:'';position:absolute;bottom:-4px;left:0;right:0;
-  height:1px;background:var(--c-accent-gold);
+  height:1px;background:var(--c-accent);
   transform:scaleX(0);transition:transform .3s;
 }
 .nav-links a:hover,.nav-links a:focus-visible{color:var(--c-white)}
@@ -141,11 +139,11 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 .nav-cta{
   display:inline-flex;align-items:center;gap:6px;
   padding:9px 20px;border-radius:99px;
-  background:var(--c-accent-gold);color:var(--c-bg)!important;
+  background:var(--c-accent);color:var(--c-bg)!important;
   font-weight:500;font-size:.85rem;
   transition:background .3s,transform .2s;
 }
-.nav-cta:hover{background:#D4B87C;transform:translateY(-1px)}
+.nav-cta:hover{background:#1970B0;transform:translateY(-1px)}
 .nav-cta::after{display:none!important}
 .menu-toggle{
   display:none;flex-direction:column;gap:5px;
@@ -155,12 +153,13 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
   display:block;height:2px;background:var(--c-white);
   border-radius:1px;transition:transform .3s,opacity .3s;transform-origin:center;
 }
+.menu-toggle.active span{background:var(--c-text)!important}
 .menu-toggle.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .menu-toggle.active span:nth-child(2){opacity:0}
 .menu-toggle.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 .mobile-nav{
   display:none;position:fixed;inset:0;z-index:99;
-  background:rgba(15,15,26,.97);
+  background:rgba(255,255,255,.97);
   backdrop-filter:blur(20px);
   -webkit-backdrop-filter:blur(20px);
   padding:100px 32px 40px;
@@ -174,10 +173,10 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
   color:var(--c-text-muted);transition:color .2s;
   font-family:var(--ff-heading);letter-spacing:.01em;
 }
-.mobile-nav a:hover,.mobile-nav a:focus-visible{color:var(--c-white)}
+.mobile-nav a:hover,.mobile-nav a:focus-visible{color:var(--c-text)}
 .mobile-nav .mobile-cta{
   margin-top:16px;text-align:center;
-  background:var(--c-accent-gold);color:var(--c-bg);
+  background:var(--c-accent);color:var(--c-bg);
   border-radius:99px;padding:14px 28px;font-family:var(--ff-body);
   font-weight:500;border:none;
 }
@@ -199,23 +198,25 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 .hero-bg::after{
   content:'';position:absolute;inset:0;
   background:
-    radial-gradient(ellipse 70% 60% at 50% 40%,rgba(201,169,110,.08) 0%,transparent 70%),
-    linear-gradient(to bottom,rgba(15,15,26,.4) 0%,rgba(15,15,26,.7) 60%,var(--c-bg) 100%);
+    radial-gradient(ellipse 70% 60% at 50% 40%,rgba(31,129,200,.2) 0%,transparent 70%),
+    linear-gradient(to bottom,rgba(26,35,50,.3) 0%,rgba(26,35,50,.65) 60%,var(--c-bg) 100%);
 }
-.hero-content{position:relative;z-index:2;max-width:720px}
+.hero-content{position:relative;z-index:2;max-width:720px;color:#fff}
+.hero-content h1{color:#fff}
+.hero-content .hero-tagline{color:rgba(255,255,255,.75)}
 .hero-badge{
   display:inline-flex;align-items:center;gap:8px;
   padding:8px 20px;border-radius:99px;
-  border:1px solid var(--c-border-gold);
-  background:rgba(201,169,110,.08);
+  border:1px solid rgba(255,255,255,.2);
+  background:rgba(255,255,255,.1);
   font-size:.82rem;font-weight:500;
-  color:var(--c-accent-gold);
+  color:#fff;
   letter-spacing:.02em;
   margin-bottom:28px;
   backdrop-filter:blur(8px);
   -webkit-backdrop-filter:blur(8px);
 }
-.hero-badge .stars{color:var(--c-accent-gold);font-size:.9rem;letter-spacing:1px}
+.hero-badge .stars{color:#fff;font-size:.9rem;letter-spacing:1px}
 .hero h1{
   font-family:var(--ff-heading);
   font-size:clamp(2.4rem,6vw,4.2rem);
@@ -225,7 +226,7 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
   letter-spacing:-.01em;
   margin-bottom:20px;
 }
-.hero h1 span{color:var(--c-accent-gold)}
+.hero h1 span{color:var(--c-accent)}
 .hero-tagline{
   font-size:1.1rem;
   color:var(--c-text-muted);
@@ -235,23 +236,23 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 .hero-cta{
   display:inline-flex;align-items:center;gap:10px;
   padding:15px 36px;border-radius:99px;
-  background:var(--c-accent-gold);
+  background:var(--c-accent);
   color:var(--c-bg);
   font-weight:500;font-size:1rem;
   font-family:var(--ff-body);
   letter-spacing:.01em;
   transition:background .3s,transform .2s,box-shadow .3s;
-  box-shadow:0 4px 24px rgba(201,169,110,.25);
+  box-shadow:0 4px 24px rgba(31,129,200,.25);
 }
-.hero-cta:hover{background:#D4B87C;transform:translateY(-2px);box-shadow:0 8px 36px rgba(201,169,110,.35)}
+.hero-cta:hover{background:#1970B0;transform:translateY(-2px);box-shadow:0 8px 36px rgba(31,129,200,.35)}
 .hero-scroll{
   position:absolute;bottom:36px;left:50%;transform:translateX(-50%);z-index:2;
   display:flex;flex-direction:column;align-items:center;gap:8px;
-  color:var(--c-text-subtle);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;
+  color:rgba(255,255,255,.5);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;
 }
 .hero-scroll::after{
   content:'';width:1px;height:32px;
-  background:linear-gradient(to bottom,var(--c-text-subtle),transparent);
+  background:linear-gradient(to bottom,rgba(255,255,255,.4),transparent);
 }
 
 /* Section common */
@@ -259,14 +260,14 @@ section{padding:90px 24px;position:relative}
 .section-inner{max-width:1120px;margin:0 auto}
 .section-label{
   font-size:.75rem;font-weight:500;letter-spacing:.12em;
-  text-transform:uppercase;color:var(--c-accent-gold);
+  text-transform:uppercase;color:var(--c-accent);
   margin-bottom:14px;
 }
 .section-title{
   font-family:var(--ff-heading);
   font-size:clamp(1.8rem,4vw,2.8rem);
   font-weight:400;line-height:1.18;
-  color:var(--c-white);
+  color:var(--c-text);
   letter-spacing:-.01em;
   margin-bottom:16px;
 }
@@ -301,11 +302,11 @@ section{padding:90px 24px;position:relative}
 }
 .trust-item:hover{background:var(--c-surface-light)}
 .trust-icon{
-  font-size:1.6rem;margin-bottom:10px;color:var(--c-accent-gold);
+  font-size:1.6rem;margin-bottom:10px;color:var(--c-accent);
 }
 .trust-value{
   font-family:var(--ff-heading);
-  font-size:1.3rem;color:var(--c-white);
+  font-size:1.3rem;color:var(--c-text);
   margin-bottom:4px;letter-spacing:.01em;
 }
 .trust-label{font-size:.82rem;color:var(--c-text-muted);font-weight:300}
@@ -331,20 +332,20 @@ section{padding:90px 24px;position:relative}
 }
 .treatment-card::before{
   content:'';position:absolute;top:0;left:0;right:0;
-  height:2px;background:var(--c-accent-gold);
+  height:2px;background:var(--c-accent);
   transform:scaleX(0);transform-origin:left;
   transition:transform .4s;
 }
 .treatment-card:hover{background:var(--c-surface-light);transform:translateY(-2px)}
 .treatment-card:hover::before{transform:scaleX(1)}
-.treatment-card:nth-child(1) .treatment-num{color:var(--c-accent-gold)}
-.treatment-card:nth-child(2) .treatment-num{color:var(--c-accent-blue)}
-.treatment-card:nth-child(3) .treatment-num{color:var(--c-accent-gold)}
-.treatment-card:nth-child(4) .treatment-num{color:var(--c-accent-blue)}
-.treatment-card:nth-child(5) .treatment-num{color:var(--c-accent-gold)}
-.treatment-card:nth-child(6) .treatment-num{color:var(--c-accent-blue)}
-.treatment-card:nth-child(7) .treatment-num{color:var(--c-accent-gold)}
-.treatment-card:nth-child(8) .treatment-num{color:var(--c-accent-blue)}
+.treatment-card:nth-child(1) .treatment-num{color:var(--c-accent)}
+.treatment-card:nth-child(2) .treatment-num{color:var(--c-accent)}
+.treatment-card:nth-child(3) .treatment-num{color:var(--c-accent)}
+.treatment-card:nth-child(4) .treatment-num{color:var(--c-accent)}
+.treatment-card:nth-child(5) .treatment-num{color:var(--c-accent)}
+.treatment-card:nth-child(6) .treatment-num{color:var(--c-accent)}
+.treatment-card:nth-child(7) .treatment-num{color:var(--c-accent)}
+.treatment-card:nth-child(8) .treatment-num{color:var(--c-accent)}
 .treatment-num{
   font-family:var(--ff-heading);
   font-size:2.2rem;line-height:1;
@@ -353,7 +354,7 @@ section{padding:90px 24px;position:relative}
 .treatment-name{
   font-family:var(--ff-heading);
   font-size:1.1rem;
-  color:var(--c-white);
+  color:var(--c-text);
   margin-bottom:6px;letter-spacing:.01em;
 }
 .treatment-desc{
@@ -377,14 +378,14 @@ section{padding:90px 24px;position:relative}
 .about-image img{width:100%;height:100%;object-fit:cover}
 .about-image::after{
   content:'';position:absolute;inset:0;
-  background:linear-gradient(to top,rgba(15,15,26,.3),transparent 60%);
+  background:linear-gradient(to top,rgba(0,0,0,.1),transparent 60%);
 }
 .about-image-accent{
   position:absolute;top:-12px;right:-12px;bottom:-12px;left:-12px;
-  border:1px solid var(--c-accent-gold-dim);
+  border:1px solid var(--c-accent-dim);
   border-radius:var(--radius-lg);pointer-events:none;z-index:-1;
 }
-.about-content .section-label{color:var(--c-accent-gold)}
+.about-content .section-label{color:var(--c-accent)}
 .about-content .section-title{margin-bottom:24px}
 .about-content p{
   color:var(--c-text-muted);margin-bottom:18px;
@@ -396,11 +397,11 @@ section{padding:90px 24px;position:relative}
 }
 .about-highlight{
   display:flex;align-items:center;gap:10px;
-  font-size:.88rem;color:var(--c-white);
+  font-size:.88rem;color:var(--c-text);
 }
 .about-highlight .hl-dot{
   width:8px;height:8px;border-radius:50%;
-  background:var(--c-accent-gold);flex-shrink:0;
+  background:var(--c-accent);flex-shrink:0;
 }
 
 /* Reviews */
@@ -420,8 +421,8 @@ section{padding:90px 24px;position:relative}
   transition:border-color .3s,transform .3s;
   display:flex;flex-direction:column;
 }
-.review-card:hover{border-color:var(--c-border-gold);transform:translateY(-3px)}
-.review-stars{color:var(--c-accent-gold);font-size:.95rem;letter-spacing:2px;margin-bottom:14px}
+.review-card:hover{border-color:var(--c-border-accent);transform:translateY(-3px)}
+.review-stars{color:var(--c-accent);font-size:.95rem;letter-spacing:2px;margin-bottom:14px}
 .review-text{
   font-size:.92rem;color:var(--c-text-muted);
   line-height:1.65;font-weight:300;flex:1;
@@ -429,7 +430,7 @@ section{padding:90px 24px;position:relative}
 }
 .review-author{
   font-family:var(--ff-heading);
-  font-size:.95rem;color:var(--c-white);
+  font-size:.95rem;color:var(--c-text);
 }
 .review-author span{display:block;font-size:.78rem;color:var(--c-text-subtle);font-family:var(--ff-body);font-weight:300;margin-top:2px}
 
@@ -452,7 +453,7 @@ section{padding:90px 24px;position:relative}
 .gallery-item:hover img{transform:scale(1.05)}
 .gallery-item::after{
   content:'';position:absolute;inset:0;
-  background:linear-gradient(to top,rgba(15,15,26,.5),transparent);
+  background:linear-gradient(to top,rgba(0,0,0,.15),transparent);
   opacity:0;transition:opacity .3s;
 }
 .gallery-item:hover::after{opacity:1}
@@ -472,7 +473,7 @@ section{padding:90px 24px;position:relative}
 .hours-circle{
   width:220px;height:220px;
   border-radius:50%;
-  border:1px solid var(--c-border-gold);
+  border:1px solid var(--c-border-accent);
   display:flex;align-items:center;justify-content:center;
   flex-direction:column;
   text-align:center;
@@ -481,14 +482,14 @@ section{padding:90px 24px;position:relative}
 .hours-circle::before{
   content:'';position:absolute;inset:-8px;
   border-radius:50%;
-  border:1px solid rgba(201,169,110,.08);
+  border:1px solid rgba(31,129,200,.08);
 }
 .hours-circle .hc-day{
   font-family:var(--ff-heading);
-  font-size:1.3rem;color:var(--c-white);
+  font-size:1.3rem;color:var(--c-text);
 }
 .hours-circle .hc-time{
-  font-size:.9rem;color:var(--c-accent-gold);
+  font-size:.9rem;color:var(--c-accent);
   margin-top:4px;
 }
 .hours-list{display:flex;flex-direction:column;gap:0}
@@ -498,7 +499,7 @@ section{padding:90px 24px;position:relative}
 }
 .hours-row:last-child{border-bottom:none}
 .hours-day{
-  font-weight:400;color:var(--c-white);
+  font-weight:400;color:var(--c-text);
   font-size:.95rem;letter-spacing:.01em;
 }
 .hours-time{
@@ -516,10 +517,10 @@ section{padding:90px 24px;position:relative}
 .contact-item{display:flex;align-items:flex-start;gap:16px}
 .contact-icon{
   width:44px;height:44px;border-radius:var(--radius-sm);
-  background:var(--c-accent-gold-dim);
+  background:var(--c-accent-dim);
   display:flex;align-items:center;justify-content:center;
   font-size:1.1rem;flex-shrink:0;
-  color:var(--c-accent-gold);
+  color:var(--c-accent);
 }
 .contact-detail{}
 .contact-detail .cd-label{
@@ -528,10 +529,10 @@ section{padding:90px 24px;position:relative}
   margin-bottom:4px;
 }
 .contact-detail .cd-value{
-  font-size:1rem;color:var(--c-white);
+  font-size:1rem;color:var(--c-text);
   transition:color .2s;
 }
-a.cd-value:hover{color:var(--c-accent-gold)}
+a.cd-value:hover{color:var(--c-accent)}
 .contact-map{
   border-radius:var(--radius-lg);overflow:hidden;
   height:340px;border:1px solid var(--c-border);
@@ -546,14 +547,14 @@ a.cd-value:hover{color:var(--c-accent-gold)}
 }
 #cta-final::before{
   content:'';position:absolute;inset:0;
-  background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(201,169,110,.06) 0%,transparent 70%);
+  background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(31,129,200,.06) 0%,transparent 70%);
   pointer-events:none;
 }
 .cta-final-title{
   font-family:var(--ff-heading);
   font-size:clamp(2rem,4.5vw,3rem);
   font-weight:400;line-height:1.18;
-  color:var(--c-white);
+  color:var(--c-text);
   letter-spacing:-.01em;
   margin-bottom:16px;
 }
@@ -564,15 +565,15 @@ a.cd-value:hover{color:var(--c-accent-gold)}
 .cta-final-btn{
   display:inline-flex;align-items:center;gap:10px;
   padding:16px 40px;border-radius:99px;
-  background:var(--c-accent-gold);
+  background:var(--c-accent);
   color:var(--c-bg);
   font-weight:500;font-size:1.05rem;
   font-family:var(--ff-body);
   letter-spacing:.01em;
   transition:background .3s,transform .2s,box-shadow .3s;
-  box-shadow:0 4px 28px rgba(201,169,110,.3);
+  box-shadow:0 4px 28px rgba(31,129,200,.3);
 }
-.cta-final-btn:hover{background:#D4B87C;transform:translateY(-2px);box-shadow:0 8px 40px rgba(201,169,110,.4)}
+.cta-final-btn:hover{background:#1970B0;transform:translateY(-2px);box-shadow:0 8px 40px rgba(31,129,200,.4)}
 
 /* Footer */
 .site-footer{
@@ -589,9 +590,11 @@ a.cd-value:hover{color:var(--c-accent-gold)}
 }
 .footer-logo{
   font-family:var(--ff-heading);
-  font-size:1.2rem;color:var(--c-white);
+  font-size:1.2rem;color:var(--c-text);
+  display:flex;align-items:center;gap:8px;
 }
-.footer-logo span{color:var(--c-accent-gold)}
+.footer-logo-img{height:36px;width:auto;display:block}
+.footer-logo span{color:var(--c-accent)}
 .footer-social{display:flex;gap:14px}
 .footer-social a{
   width:38px;height:38px;border-radius:50%;
@@ -601,9 +604,9 @@ a.cd-value:hover{color:var(--c-accent-gold)}
   transition:border-color .3s,color .3s,background .3s;
 }
 .footer-social a:hover{
-  border-color:var(--c-accent-gold);
-  color:var(--c-accent-gold);
-  background:var(--c-accent-gold-dim);
+  border-color:var(--c-accent);
+  color:var(--c-accent);
+  background:var(--c-accent-dim);
 }
 .footer-bottom{
   display:flex;justify-content:space-between;align-items:center;
@@ -614,7 +617,7 @@ a.cd-value:hover{color:var(--c-accent-gold)}
 .footer-legal a:hover{color:var(--c-text-muted)}
 .footer-copy{font-size:.78rem;color:var(--c-text-subtle)}
 .footer-copy a{color:var(--c-text-muted);transition:color .2s}
-.footer-copy a:hover{color:var(--c-accent-gold)}
+.footer-copy a:hover{color:var(--c-accent)}
 
 /* Floating mobile buttons */
 .mobile-float{
@@ -630,7 +633,7 @@ a.cd-value:hover{color:var(--c-accent-gold)}
 }
 .mobile-float-btn:active{transform:scale(.96)}
 .float-call{
-  background:var(--c-white);color:var(--c-bg);
+  background:var(--c-white);color:var(--c-text);
 }
 .float-wa{
   background:#25D366;color:#fff;
@@ -649,15 +652,15 @@ a.cd-value:hover{color:var(--c-accent-gold)}
 .reveal-delay-5{transition-delay:.4s}
 .reveal-delay-6{transition-delay:.5s}
 
-/* Decorative gold line */
-.gold-line{
-  width:40px;height:2px;background:var(--c-accent-gold);
+/* Decorative accent line */
+.accent-line{
+  width:40px;height:2px;background:var(--c-accent);
   margin-bottom:18px;border-radius:1px;
 }
-.section-header .gold-line{margin-left:auto;margin-right:auto}
+.section-header .accent-line{margin-left:auto;margin-right:auto}
 
 /* Rating stars helper */
-.stars-gold{color:var(--c-accent-gold);letter-spacing:2px}
+.stars-accent{color:var(--c-accent);letter-spacing:2px}
 
 /* Responsive */
 @media(max-width:1024px){
@@ -712,14 +715,14 @@ a.cd-value:hover{color:var(--c-accent-gold)}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,200..800;1,9..40,200..800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Crect width='36' height='36' rx='6' fill='%23C9A96E'/%3E%3Ctext x='18' y='25' text-anchor='middle' font-family='Georgia,serif' font-weight='bold' font-size='20' fill='%230F0F1A'%3EMS%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Crect width='36' height='36' rx='6' fill='%231F81C8'/%3E%3Ctext x='18' y='25' text-anchor='middle' font-family='Georgia,serif' font-weight='bold' font-size='20' fill='%23FFFFFF'%3EMS%3C/text%3E%3C/svg%3E">
 </head>
 <body>
 
 <header class="site-header" id="header">
   <div class="header-inner">
     <a href="#" class="logo">
-      <div class="logo-mark">MS</div>
+      <img src="Logo-Clinica-Dental-Marian-Santos-fondo-transparente.png" alt="Clínica Dental Marian Santos" class="logo-img" height="44">
       <div class="logo-text">Marian <span>Santos</span></div>
     </a>
     <nav class="nav-links" id="navLinks">
@@ -796,7 +799,7 @@ a.cd-value:hover{color:var(--c-accent-gold)}
 <section id="tratamientos">
   <div class="section-inner">
     <div class="section-header reveal">
-      <div class="gold-line"></div>
+      <div class="accent-line"></div>
       <p class="section-label">Nuestros servicios</p>
       <h2 class="section-title">Tratamientos diseñados para ti</h2>
       <p class="section-subtitle">Cada sonrisa es única. Descubre nuestra gama completa de especialidades odontológicas con el sello de calidad de la Dra. Marian Santos.</p>
@@ -855,7 +858,7 @@ a.cd-value:hover{color:var(--c-accent-gold)}
         <div class="about-image-accent"></div>
       </div>
       <div class="about-content reveal reveal-delay-2">
-        <div class="gold-line"></div>
+        <div class="accent-line"></div>
         <p class="section-label">Sobre mí</p>
         <h2 class="section-title">Dra. Marian Santos</h2>
         <p>Con más de 15 años de experiencia en el sector, la Dra. Marian Santos ha construido una clínica donde la excelencia clínica y el trato humano se dan la mano. Su formación continua en las técnicas más avanzadas de odontología digital le permite ofrecer diagnósticos precisos y tratamientos mínimamente invasivos.</p>
@@ -875,7 +878,7 @@ a.cd-value:hover{color:var(--c-accent-gold)}
 <section id="resenas">
   <div class="section-inner">
     <div class="section-header reveal">
-      <div class="gold-line"></div>
+      <div class="accent-line"></div>
       <p class="section-label">Lo que dicen nuestros pacientes</p>
       <h2 class="section-title">188 reseñas nos avalan</h2>
       <p class="section-subtitle">La confianza de nuestros pacientes es nuestro mayor orgullo. Estas son algunas de las experiencias reales en la Clínica Dental Marian Santos.</p>
@@ -904,17 +907,17 @@ a.cd-value:hover{color:var(--c-accent-gold)}
 <section id="galeria">
   <div class="section-inner">
     <div class="section-header reveal">
-      <div class="gold-line"></div>
+      <div class="accent-line"></div>
       <p class="section-label">Galería</p>
       <h2 class="section-title">Conoce nuestra clínica</h2>
       <p class="section-subtitle">Instalaciones diseñadas para tu comodidad, equipadas con la tecnología más avanzada para garantizar los mejores resultados.</p>
     </div>
     <div class="gallery-grid reveal">
       <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1530026402678-0e8445e1c36f?auto=format&fit=crop&w=900&q=80" alt="Consultorio principal Clínica Dental Marian Santos" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=900&q=80" alt="Consultorio principal Clínica Dental Marian Santos" loading="lazy">
       </div>
       <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1570177644966-d7acfcd58ef5?auto=format&fit=crop&w=600&q=80" alt="Tecnología dental avanzada" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=600&q=80" alt="Tecnología dental avanzada" loading="lazy">
       </div>
       <div class="gallery-item">
         <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" alt="Instrumental odontológico de precisión" loading="lazy">
@@ -933,7 +936,7 @@ a.cd-value:hover{color:var(--c-accent-gold)}
 <section id="horario">
   <div class="section-inner">
     <div class="section-header reveal">
-      <div class="gold-line"></div>
+      <div class="accent-line"></div>
       <p class="section-label">Horario</p>
       <h2 class="section-title">Cuándo visitarnos</h2>
       <p class="section-subtitle">Consulta nuestros horarios y elige el momento que mejor se adapte a tu rutina. Estamos en C. San Juan de Dios, 5, Cáceres.</p>
@@ -979,7 +982,7 @@ a.cd-value:hover{color:var(--c-accent-gold)}
 <section id="contacto">
   <div class="section-inner">
     <div class="section-header reveal">
-      <div class="gold-line"></div>
+      <div class="accent-line"></div>
       <p class="section-label">Contacto</p>
       <h2 class="section-title">Estamos cerca de ti</h2>
       <p class="section-subtitle">Pide tu cita hoy mismo. La Dra. Marian Santos y su equipo te esperan para cuidar de tu salud dental.</p>
@@ -1033,7 +1036,7 @@ a.cd-value:hover{color:var(--c-accent-gold)}
 <!-- ════════════ CTA FINAL ════════════ -->
 <section id="cta-final">
   <div class="section-inner reveal">
-    <div class="gold-line" style="margin:0 auto 18px"></div>
+    <div class="accent-line" style="margin:0 auto 18px"></div>
     <h2 class="cta-final-title">Empieza hoy el camino hacia tu mejor sonrisa</h2>
     <p class="cta-final-sub">Pide tu primera consulta con la Dra. Marian Santos. Valoración personalizada, sin compromiso.</p>
     <a href="tel:+34638880160" class="cta-final-btn">
@@ -1047,7 +1050,7 @@ a.cd-value:hover{color:var(--c-accent-gold)}
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-top">
-      <div class="footer-logo">Marian <span>Santos</span></div>
+      <div class="footer-logo"><img src="Logo-Clinica-Dental-Marian-Santos-fondo-transparente.png" alt="Clínica Dental Marian Santos" class="footer-logo-img" height="36"> Marian <span>Santos</span></div>
       <div class="footer-social">
         <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
         <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">FB</a>
